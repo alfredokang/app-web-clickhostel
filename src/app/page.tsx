@@ -1,218 +1,13 @@
-"use client";
-
+import { heroImages } from "@/data/hero";
 import { ImageWithFallback } from "../components/image-with-fallback";
-
-const whatsappLink =
-  "https://wa.me/5548999999999?text=Ol%C3%A1%20quero%20garantir%20minha%20reserva%20no%20Click%20Hostel!";
-
-const heroImages = [
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-varanda-lagoa-por-do-sol.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
-    alt: "Varanda iluminada com vista para a lagoa ao pôr do sol",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-lounge-design-contemporaneo.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=800&q=80",
-    alt: "Sala de estar aconchegante com decoração contemporânea",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-suite-master-luz-natural.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80",
-    alt: "Suíte master com luz natural",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=800&q=80",
-    alt: "Sala de estar aconchegante com decoração contemporânea",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80",
-    alt: "Quarto com cama queen e iluminação acolhedora",
-  },
-];
-
-const highlights = [
-  {
-    title: "Localização Imbatível",
-    description:
-      "Na Lagoa da Conceição, próximo às praias, trilhas, cafés e ao melhor da cena criativa de Florianópolis.",
-  },
-  {
-    title: "Experiência Personalizada",
-    description:
-      "Anfitriã presente para ajudar com dicas locais, roteiros exclusivos e suporte antes, durante e após a estadia.",
-  },
-  {
-    title: "Flexibilidade Total",
-    description:
-      "Quartos privativos e compartilhados, diárias flexíveis, espaços para trabalho remoto e estrutura completa para long stays.",
-  },
-];
-
-const accommodationTypes = [
-  {
-    title: "Suítes privativas",
-    description:
-      "Conforto com banheiro exclusivo, enxoval completo, smart TV, frigobar e decoração contemporânea.",
-    // image: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-suite-privativa.jpg",
-    fallbackSrc: "",
-    image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
-    alt: "Suíte privativa decorada com tons claros e plantas",
-  },
-  {
-    title: "Quartos compartilhados",
-    description:
-      "Beliches espaçosas, lockers individuais e luz de leitura para quem busca economia sem abrir mão do bem-estar.",
-    // image: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-quarto-compartilhado-design.jpg",
-    fallbackSrc: "",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80",
-    alt: "Dormitório compartilhado estiloso com beliches de madeira",
-  },
-  {
-    title: "Estadias longas",
-    description:
-      "Planos especiais para nômades digitais e estudantes com cozinha equipada, lavanderia e ambiente colaborativo.",
-    // image: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-espaco-convivencia-cozinha.jpg",
-    fallbackSrc: "",
-    image:
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80",
-    alt: "Espaço de convivência com cozinha integrada e plantas",
-  },
-];
-
-const amenities = [
-  "Cozinha compartilhada completa",
-  "Áreas internas e externas para coworking",
-  "Internet fibra óptica super veloz",
-  "Terraço com vista para a Lagoa",
-  "Lounges com ar-condicionado e smart TV",
-  "Armários com fechadura em todos os quartos",
-  "Café e chá disponíveis 24h",
-  "Estacionamento rotativo gratuito na rua",
-];
-
-const experiences = [
-  {
-    name: "Tours guiados e experiências locais",
-    detail:
-      "Trilhas na Costa da Lagoa, passeios de stand up paddle, tours gastronômicos e conexão com anfitriões parceiros.",
-  },
-  {
-    name: "Coworking criativo",
-    detail:
-      "Espaços com ergonomia, boa iluminação e tomadas estrategicamente posicionadas para focar no trabalho ou nos estudos.",
-  },
-  {
-    name: "Comunidade global",
-    detail:
-      "Eventos de integração, noites temáticas e networking com viajantes de diversas partes do mundo.",
-  },
-];
-
-const faqs = [
-  {
-    question: "Como faço minha reserva?",
-    answer:
-      "Todas as reservas são feitas diretamente pelo WhatsApp da anfitriã. Clique em qualquer botão do site para iniciar a conversa e garantir a melhor tarifa.",
-  },
-  {
-    question: "O hostel é perto da praia?",
-    answer:
-      "Estamos a 10 minutos das praias Mole e Joaquina e a poucos passos da orla da Lagoa da Conceição, com fácil acesso de transporte público e bikes compartilhadas.",
-  },
-  {
-    question: "Tem espaço para trabalhar?",
-    answer:
-      "Sim! Oferecemos coworking interno climatizado, varandas com mesas, internet fibra óptica e salas silenciosas para reuniões online.",
-  },
-  {
-    question: "O café da manhã está incluso?",
-    answer:
-      "Oferecemos uma estação de café e chá 24h. Parcerias com cafeterias locais garantem descontos especiais para hóspedes.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Camila, São Paulo",
-    content:
-      "Atendimento impecável da anfitriã! As dicas de passeios fizeram toda a diferença na minha viagem solo.",
-  },
-  {
-    name: "Lucas, Buenos Aires",
-    content:
-      "Espaço perfeito para trabalho remoto. Internet rápida, áreas silenciosas e uma vista incrível da Lagoa.",
-  },
-  {
-    name: "Maria & João, Curitiba",
-    content:
-      "Escolhemos o quarto privativo e parecia um boutique hotel. Voltaremos com certeza!",
-  },
-];
-
-const galleryImages = [
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-piscina-iluminada.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    alt: "Piscina iluminada em casa boutique à noite",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-area-externa-fogo.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1489367875852-236a7d1b9ee0?auto=format&fit=crop&w=1200&q=80",
-    alt: "Área externa com fogo de chão e lounges confortáveis",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-cozinha-compartilhada.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    alt: "Cozinha moderna com bancada ampla e iluminação quente",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-varanda-vista-lagoa.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
-    alt: "Varanda com vista para lagoa ao pôr do sol",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-coworking-janelas-amplas.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
-    alt: "Espaço de coworking com mesas coletivas e janelas amplas",
-  },
-  {
-    src: "https://datehouse.com.br/wp-content/uploads/2023/09/date-house-suite-minimalista.jpg",
-    fallbackSrc:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-    alt: "Suíte minimalista com iluminação natural",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1489367875852-236a7d1b9ee0?auto=format&fit=crop&w=1200&q=80",
-    alt: "Área externa com fogo de chão e lounges confortáveis",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-    alt: "Cozinha moderna com bancada ampla e iluminação quente",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
-    alt: "Varanda com vista para a lagoa ao pôr do sol",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
-    alt: "Espaço de coworking com mesas coletivas e janelas amplas",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-    alt: "Quarto minimalista com cama king e iluminação natural",
-  },
-];
+import { highlights } from "@/data/highlights";
+import { accommodationTypes } from "@/data/accommodationTypes";
+import { galleryImages } from "@/data/gallery";
+import { amenities } from "@/data/amenities";
+import { testimonials } from "@/data/testimonials";
+import { experiences } from "@/data/experiences";
+import { faqs } from "@/data/faqs";
+import { whatsappLink } from "@/config/whatsappLink";
 
 export default function Home() {
   return (
@@ -227,7 +22,7 @@ export default function Home() {
               Click Hostel
             </p>
             <p className="text-sm font-medium text-slate-100/80">
-              Lagoa da Conceição · Florianópolis · Brasil
+              São Paulo · SP · Brasil
             </p>
           </div>
           <a
@@ -241,19 +36,22 @@ export default function Home() {
         </header>
 
         <main className="flex flex-1 flex-col gap-20">
+          {/* HERO */}
           <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-8">
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.4em] text-cyan-200/90">
                 hospedagem inteligente
               </span>
               <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Viva a Lagoa da Conceição com o aconchego de casa e o dinamismo
-                de um coliving.
+                Mais que hospedagem: conforto e atenção em cada detalhe
               </h1>
               <p className="text-lg text-slate-200/80 sm:text-xl">
-                O Click Hostel combina quartos confortáveis, ambientes criativos
-                e a atenção pessoal da anfitriã para você explorar Florianópolis
-                no seu ritmo.
+                O Click Hostel é mais do que uma hospedagem: é um espaço para
+                viver São Paulo com conforto, criatividade e atenção sob medida
+                — com quartos e suítes que acomodam desde viajantes individuais
+                até grandes grupos, tudo no seu ritmo e do seu jeito, e com um
+                anfitrião sempre disponível para oferecer um atendimento
+                impecável e personalizado.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
@@ -262,7 +60,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Falar com a anfitriã no WhatsApp
+                  Falar com o anfitrião no WhatsApp
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white/90 transition hover:border-emerald-400/80 hover:text-emerald-200"
@@ -277,23 +75,27 @@ export default function Home() {
                     4.9/5
                   </p>
                   <p className="text-sm text-slate-200/70">
-                    Avaliação média dos hóspedes em plataformas parceiras.
-                  </p>
-                </div>
-                <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-3xl font-semibold text-emerald-300">50m</p>
-                  <p className="text-sm text-slate-200/70">
-                    Da orla da Lagoa, com restaurantes, bares e transporte
-                    público.
+                    Avaliação média dos hóspedes que se hospedaram conosco.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                   <p className="text-3xl font-semibold text-emerald-300">
-                    Wi-Fi 500Mb
+                    300m
                   </p>
                   <p className="text-sm text-slate-200/70">
-                    Internet de alta velocidade para reuniões, aulas e
-                    streaming.
+                    Localização privilegiada: a 300 m do Expo Imigrantes e do
+                    Comitê Paralímpico Brasileiro, com acesso rápido às
+                    principais avenidas.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                  <p className="text-3xl font-semibold text-emerald-300">
+                    Prime
+                  </p>
+                  <p className="text-sm text-slate-200/70">
+                    Preço justo, atendimento impecável e o melhor
+                    custo-benefício para a sua viagem — tudo isso com um café da
+                    manhã delicioso incluso.
                   </p>
                 </div>
               </div>
@@ -355,15 +157,17 @@ export default function Home() {
             </div>
           </section>
 
+          {/* GALLERY */}
           <section className="space-y-8">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                  Galeria para sentir a vibe
+                  Descubra o clima da Click Hostel
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-slate-200/80">
-                  Se inspire com ambientes que combinam design brasileiro,
-                  conforto e a luz única da Lagoa da Conceição.
+                  De quartos aconchegantes a áreas sociais vibrantes, cada canto
+                  foi projetado para oferecer conforto, estilo e experiências
+                  únicas durante sua estadia em São Paulo.
                 </p>
               </div>
               <a
@@ -376,7 +180,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="-mx-6 overflow-x-auto pb-6 md:-mx-10 lg:-mx-16">
+            <div className="-mx-6 overflow-x-auto pb-6 md:-mx-10 lg:-mx-16 custom-scroll">
               <div className="flex w-max gap-6 px-6 md:px-10 lg:px-16">
                 {galleryImages.map((image) => (
                   <div
@@ -398,8 +202,42 @@ export default function Home() {
                 ))}
               </div>
             </div>
+            <div className="flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+              <p className="max-w-2xl text-base text-slate-200/80 font-semibold">
+                Arraste as fotos ou a barra para os lados
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
           </section>
 
+          {/* ACCOMMODATION TYPES */}
           <section id="acomodacoes" className="space-y-12">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -407,9 +245,9 @@ export default function Home() {
                   Acomodações para cada estilo de viagem
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-slate-200/80">
-                  Escolha entre suítes privativas com toque boutique,
-                  dormitórios acolhedores e soluções flexíveis para estadias
-                  prolongadas.
+                  De suítes elegantes a dormitórios confortáveis, temos
+                  acomodações perfeitas para cada perfil de viajante e duração
+                  da estadia.
                 </p>
               </div>
               <a
@@ -466,16 +304,18 @@ export default function Home() {
             </div>
           </section>
 
+          {/* EXPERIENCES */}
           <section className="grid gap-10 rounded-[48px] border border-white/10 bg-slate-900/70 p-10 shadow-[0_40px_80px_-60px_rgba(14,165,233,0.4)] lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                Trabalhe, conecte-se e relaxe sem sair de casa
+                Trabalhe, conecte-se e relaxe
               </h2>
               <p className="text-base text-slate-200/80">
-                Seja para um final de semana ou para meses de estadia, o Click
-                Hostel oferece infraestrutura completa para produtividade e
-                lazer. Aproveite a cozinha comunitária, áreas de descanso,
-                coworking criativo e a energia colaborativa da nossa comunidade.
+                Seja para dividir experiências em uma estadia compartilhada ou
+                reservar todo o espaço com exclusividade, o Click Hostel oferece
+                ambientes versáteis, confortáveis e com estrutura completa. São
+                diversas hospedagens com qualidade, praticidade e uma atmosfera
+                colaborativa que conecta pessoas.
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/90 sm:grid-cols-2">
                 {amenities.map((amenity) => (
@@ -515,6 +355,7 @@ export default function Home() {
             </div>
           </section>
 
+          {/* TESTIMONIALS */}
           <section className="space-y-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -522,8 +363,8 @@ export default function Home() {
                   Histórias de quem já ficou por aqui
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-slate-200/80">
-                  Conheça experiências reais de hóspedes que viveram
-                  Florianópolis com o cuidado da anfitriã do Click Hostel.
+                  Conheça experiências reais de hóspedes que viveram São Paulo
+                  com o cuidado da anfitrião da Click Hostel.
                 </p>
               </div>
               <a
@@ -532,36 +373,68 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Tirar dúvidas com a anfitriã
+                Tirar dúvidas com o anfitrião
               </a>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
               {testimonials.map((testimonial) => (
                 <figure
-                  key={testimonial.name}
+                  key={testimonial.key}
                   className="rounded-[36px] border border-white/10 bg-white/10 p-8 shadow-lg shadow-black/30"
                 >
+                  {/* ⭐ Avatar + nome + data */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src={testimonial.avatar || "/images/default-avatar.jpg"}
+                      alt={testimonial.name}
+                      className="h-12 w-12 rounded-full object-cover border border-emerald-400/40"
+                    />
+                    <div>
+                      <figcaption className="text-sm font-semibold text-emerald-200">
+                        {testimonial.name}
+                      </figcaption>
+                      <p className="text-xs text-slate-400">
+                        {testimonial.date}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* ⭐ Estrelas */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <span key={i} className="text-emerald-400 text-lg">
+                        ★
+                      </span>
+                    ))}
+                    {Array.from({ length: 5 - testimonial.rating }).map(
+                      (_, i) => (
+                        <span key={i} className="text-slate-500 text-lg">
+                          ★
+                        </span>
+                      )
+                    )}
+                  </div>
+
+                  {/* 💬 Avaliação */}
                   <blockquote className="text-sm leading-relaxed text-slate-100">
                     “{testimonial.content}”
                   </blockquote>
-                  <figcaption className="mt-6 text-sm font-semibold text-emerald-200">
-                    {testimonial.name}
-                  </figcaption>
                 </figure>
               ))}
             </div>
           </section>
 
+          {/* LOCATION */}
           <section className="grid gap-10 rounded-[48px] border border-white/10 bg-gradient-to-br from-slate-900/90 via-slate-950 to-slate-950 p-10 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
                 Estamos onde tudo acontece
               </h2>
               <p className="text-base text-slate-200/80">
-                Rua Vereador Osni Ortiga, Lagoa da Conceição, Florianópolis -
-                SC. A poucos minutos das praias mais famosas, escolas de
-                kitesurf, bares, restaurantes e do centrinho da Lagoa.
+                Localizados na Rua Pampa, Cidade Vargas, São Paulo – SP, estamos
+                a poucos minutos do Expo Imigrantes e do Comitê Paralímpico
+                Brasileiro.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -579,8 +452,9 @@ export default function Home() {
                     Transporte e mobilidade
                   </p>
                   <p className="mt-2">
-                    Parcerias com transfers, aluguel de bikes e pontos de ônibus
-                    próximos para você explorar a ilha inteira.
+                    Contamos com parcerias de transporte, como transfers,
+                    motoristas de aplicativo e táxis, e há pontos de ônibus a
+                    poucos passos da hospedagem.
                   </p>
                 </div>
               </div>
@@ -599,7 +473,7 @@ export default function Home() {
               <div className="w-full overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-lg shadow-cyan-500/20">
                 <iframe
                   title="Mapa Click Hostel"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.380530764688!2d-48.452360623692196!3d-27.59747032428401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273e1ae76e21c7%3A0x785e70403ee58a96!2sLagoa%20da%20Concei%C3%A7%C3%A3o%2C%20Florian%C3%B3polis%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.437950301864!2d-46.63629628448038!3d-23.60970776807395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5c1f55c0f8e5%3A0xa3d5e7b4b8578b3f!2sRua%20Pampa%2C%20Cidade%20Vargas%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004318-060!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
                   className="h-[320px] w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -609,6 +483,7 @@ export default function Home() {
             </div>
           </section>
 
+          {/* FAQS */}
           <section className="space-y-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -616,7 +491,7 @@ export default function Home() {
                   Perguntas frequentes
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-slate-200/80">
-                  Não encontrou sua resposta? Nossa anfitriã responde rápido no
+                  Não encontrou sua resposta? Nosso anfitrião responde rápido no
                   WhatsApp para garantir sua melhor experiência.
                 </p>
               </div>
@@ -648,12 +523,13 @@ export default function Home() {
           </section>
         </main>
 
+        {/* FOOTER */}
         <footer className="mt-auto rounded-[40px] border border-white/10 bg-white/10 p-8 text-sm text-slate-200/80">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-lg font-semibold text-white">Click Hostel</p>
               <p className="mt-1 text-sm text-slate-200/70">
-                Lagoa da Conceição · Florianópolis · Santa Catarina · Brasil
+                Jabaquara · São Paulo · SP · Brasil
               </p>
             </div>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
@@ -666,13 +542,13 @@ export default function Home() {
                 Reservar pelo WhatsApp
               </a>
               <span className="text-xs uppercase tracking-[0.3em] text-slate-200/60">
-                hospedagem · coworking · experiências
+                hospedagem · experiências · feiras · esportes
               </span>
             </div>
           </div>
           <p className="mt-6 text-xs text-slate-400">
             © {new Date().getFullYear()} Click Hostel. Todos os direitos
-            reservados. Atendimento personalizado diretamente com a anfitriã.
+            reservados. Atendimento personalizado diretamente com o anfitrião.
           </p>
         </footer>
       </div>

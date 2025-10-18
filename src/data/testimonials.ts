@@ -1,0 +1,51 @@
+export const testimonials = [
+  {
+    key: 1,
+    name: "Denise Junqueira",
+    content: "Excelente atendimento.",
+    rating: 5,
+    date: "Agosto de 2024",
+    avatar: "/images/avatares/avatar1.png",
+  },
+  {
+    key: 2,
+    name: "Marina Oliveira",
+    content: "Foi ótima, e indico.",
+    rating: 5,
+    date: "Agosto de 2024",
+    avatar: "/images/avatares/avatar2.png",
+  },
+  {
+    key: 3,
+    name: "Robson Alvarenga",
+    content: "Experiência Ótimo neste local",
+    rating: 5,
+    date: "Junho de 2024",
+    avatar: "/images/avatares/avatar3.png",
+  },
+  {
+    key: 4,
+    name: "Meg Emmerich",
+    content:
+      "O Sr Sílvio é muito atencioso e prestativo . As roupas de cama e banho limpinhas e excelente ambiente. Viajei com marido e filho e os 2 amaram.",
+    rating: 5,
+    date: "Maio de 2024",
+    avatar: "/images/avatares/avatar4.png",
+  },
+  {
+    key: 5,
+    name: "Gabriela Colussi",
+    content: "Muy linda casa. Espacios amplios.",
+    rating: 5,
+    date: "Abril de 2024",
+    avatar: "/images/avatares/avatar5.png",
+  },
+  {
+    key: 6,
+    name: "Benjamin Cusit",
+    content: "Estadia muito boa. Atendimento de Bia e Silvo excelente.",
+    rating: 5,
+    date: "Abril de 2024",
+    avatar: "/images/avatares/avatar6.png",
+  },
+];
