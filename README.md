@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏨 Click Hostel – Plataforma de Hospedagem Inteligente
 
-## Getting Started
+**Click Hostel** é uma aplicação web desenvolvida em **Next.js 15** com foco em **hospedagem moderna e personalizada em São Paulo**.
+A plataforma conecta viajantes, expositores, atletas e famílias a acomodações versáteis – desde quartos individuais até casas inteiras – com foco em **localização estratégica**, **acessibilidade** e **atendimento personalizado**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Funcionalidades Principais
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🏡 **Catálogo de hospedagens**: exibição de quartos, suítes e casas completas.
+- 📍 **Localização estratégica**: próximo ao Expo Imigrantes e ao Comitê Paralímpico Brasileiro.
+- ♿ **Acessibilidade**: opções adaptadas para pessoas com deficiência.
+- ☕ **Café da manhã incluso**: em todas as estadias.
+- 👥 **Ambientes colaborativos**: ideais para eventos, grupos, atletas e nômades digitais.
+- 📊 **SEO e performance otimizados**: focado em alta performance nos mecanismos de busca.
+- 📱 **Integração com WhatsApp**: reserva direta e contato com o anfitrião.
+- 🧠 **Otimizado para campanhas Google Ads (PMax)**: conversões e rastreamento com gtag.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologias Utilizadas
 
-## Learn More
+- [Next.js 15](https://nextjs.org/) – Framework React para SSR e SSG
+- [TypeScript](https://www.typescriptlang.org/) – Tipagem estática para maior segurança
+- [Tailwind CSS](https://tailwindcss.com/) – Estilização responsiva e moderna
+- [SWR](https://swr.vercel.app/) – Fetch e cache de dados no client
+- [Google Tag (gtag.js)](https://developers.google.com/tag-platform/gtagjs) – Rastreamento de conversões
+- [next-seo](https://github.com/garmeeh/next-seo) – SEO avançado e metadados dinâmicos
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Estrutura do Projeto
