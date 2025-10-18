@@ -107,6 +107,163 @@ const testimonials = [
   },
 ];
 
+const whatsappLink =
+  "https://wa.me/5548999999999?text=Ol%C3%A1%20quero%20garantir%20minha%20reserva%20no%20Click%20Hostel!";
+
+const heroImages = [
+  {
+    src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    alt: "Varanda iluminada com vista para a lagoa ao pôr do sol",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=800&q=80",
+    alt: "Sala de estar aconchegante com decoração contemporânea",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80",
+    alt: "Quarto com cama queen e iluminação acolhedora",
+  },
+];
+
+const highlights = [
+  {
+    title: "Localização Imbatível",
+    description:
+      "Na Lagoa da Conceição, próximo às praias, trilhas, cafés e ao melhor da cena criativa de Florianópolis.",
+  },
+  {
+    title: "Experiência Personalizada",
+    description:
+      "Anfitriã presente para ajudar com dicas locais, roteiros exclusivos e suporte antes, durante e após a estadia.",
+  },
+  {
+    title: "Flexibilidade Total",
+    description:
+      "Quartos privativos e compartilhados, diárias flexíveis, espaços para trabalho remoto e estrutura completa para long stays.",
+  },
+];
+
+const accommodationTypes = [
+  {
+    title: "Suítes privativas",
+    description:
+      "Conforto com banheiro exclusivo, enxoval completo, smart TV, frigobar e decoração contemporânea.",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
+    alt: "Suíte privativa decorada com tons claros e plantas",
+  },
+  {
+    title: "Quartos compartilhados",
+    description:
+      "Beliches espaçosas, lockers individuais e luz de leitura para quem busca economia sem abrir mão do bem-estar.",
+    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1000&q=80",
+    alt: "Dormitório compartilhado estiloso com beliches de madeira",
+  },
+  {
+    title: "Estadias longas",
+    description:
+      "Planos especiais para nômades digitais e estudantes com cozinha equipada, lavanderia e ambiente colaborativo.",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80",
+    alt: "Espaço de convivência com cozinha integrada e plantas",
+  },
+];
+
+const amenities = [
+  "Cozinha compartilhada completa",
+  "Áreas internas e externas para coworking",
+  "Internet fibra óptica super veloz",
+  "Terraço com vista para a Lagoa",
+  "Lounges com ar-condicionado e smart TV",
+  "Armários com fechadura em todos os quartos",
+  "Café e chá disponíveis 24h",
+  "Estacionamento rotativo gratuito na rua",
+];
+
+const experiences = [
+  {
+    name: "Tours guiados e experiências locais",
+    detail:
+      "Trilhas na Costa da Lagoa, passeios de stand up paddle, tours gastronômicos e conexão com anfitriões parceiros.",
+  },
+  {
+    name: "Coworking criativo",
+    detail:
+      "Espaços com ergonomia, boa iluminação e tomadas estrategicamente posicionadas para focar no trabalho ou nos estudos.",
+  },
+  {
+    name: "Comunidade global",
+    detail:
+      "Eventos de integração, noites temáticas e networking com viajantes de diversas partes do mundo.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Como faço minha reserva?",
+    answer:
+      "Todas as reservas são feitas diretamente pelo WhatsApp da anfitriã. Clique em qualquer botão do site para iniciar a conversa e garantir a melhor tarifa.",
+  },
+  {
+    question: "O hostel é perto da praia?",
+    answer:
+      "Estamos a 10 minutos das praias Mole e Joaquina e a poucos passos da orla da Lagoa da Conceição, com fácil acesso de transporte público e bikes compartilhadas.",
+  },
+  {
+    question: "Tem espaço para trabalhar?",
+    answer:
+      "Sim! Oferecemos coworking interno climatizado, varandas com mesas, internet fibra óptica e salas silenciosas para reuniões online.",
+  },
+  {
+    question: "O café da manhã está incluso?",
+    answer:
+      "Oferecemos uma estação de café e chá 24h. Parcerias com cafeterias locais garantem descontos especiais para hóspedes.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Camila, São Paulo",
+    content:
+      "Atendimento impecável da anfitriã! As dicas de passeios fizeram toda a diferença na minha viagem solo.",
+  },
+  {
+    name: "Lucas, Buenos Aires",
+    content:
+      "Espaço perfeito para trabalho remoto. Internet rápida, áreas silenciosas e uma vista incrível da Lagoa.",
+  },
+  {
+    name: "Maria & João, Curitiba",
+    content:
+      "Escolhemos o quarto privativo e parecia um boutique hotel. Voltaremos com certeza!",
+  },
+];
+
+const galleryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    alt: "Piscina iluminada em casa boutique à noite",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1489367875852-236a7d1b9ee0?auto=format&fit=crop&w=1200&q=80",
+    alt: "Área externa com fogo de chão e lounges confortáveis",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    alt: "Cozinha moderna com bancada ampla e iluminação quente",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    alt: "Varanda com vista para lagoa ao pôr do sol",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
+    alt: "Espaço de coworking com mesas coletivas e janelas amplas",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+    alt: "Quarto minimalista com cama king e iluminação natural",
+  },
+];
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
