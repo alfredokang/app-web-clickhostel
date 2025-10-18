@@ -27,26 +27,17 @@ export const metadata: Metadata = {
     "grupos e famílias",
     "hospedagem acessível",
     "paraolímpicos",
-    "coworking em São Paulo",
   ],
   openGraph: {
     title: "Click Hostel | Sua estadia sob medida em São Paulo",
     description:
       "Hospedagens versáteis e confortáveis em São Paulo — escolha entre quartos individuais, compartilhados ou casas completas. Ideal para expositores, turistas, atletas e grupos, com localização estratégica perto do Expo Imigrantes.",
-    url: "https://www.clickhostel.com.br",
+    url: "https://clickhostel.com.br",
     siteName: "Click Hostel",
     locale: "pt_BR",
     type: "website",
-    images: [
-      {
-        url: "https://www.clickhostel.com.br/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Click Hostel - Hospedagem inteligente em São Paulo",
-      },
-    ],
   },
-  metadataBase: new URL("https://www.clickhostel.com.br"),
+  metadataBase: new URL("https://clickhostel.com.br"),
 };
 
 export default function RootLayout({
