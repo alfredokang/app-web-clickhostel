@@ -1,4 +1,111 @@
-import Image from "next/image";
+const whatsappLink =
+  "https://wa.me/5548999999999?text=Ol%C3%A1%20quero%20garantir%20minha%20reserva%20no%20Click%20Hostel!";
+
+const highlights = [
+  {
+    title: "Localização Imbatível",
+    description:
+      "Na Lagoa da Conceição, próximo às praias, trilhas, cafés e ao melhor da cena criativa de Florianópolis.",
+  },
+  {
+    title: "Experiência Personalizada",
+    description:
+      "Anfitriã presente para ajudar com dicas locais, roteiros exclusivos e suporte antes, durante e após a estadia.",
+  },
+  {
+    title: "Flexibilidade Total",
+    description:
+      "Quartos privativos e compartilhados, diárias flexíveis, espaços para trabalho remoto e estrutura completa para long stays.",
+  },
+];
+
+const accommodationTypes = [
+  {
+    title: "Suítes privativas",
+    description:
+      "Conforto com banheiro exclusivo, enxoval completo, smart TV, frigobar e decoração contemporânea.",
+  },
+  {
+    title: "Quartos compartilhados",
+    description:
+      "Beliches espaçosas, lockers individuais e luz de leitura para quem busca economia sem abrir mão do bem-estar.",
+  },
+  {
+    title: "Estadias longas",
+    description:
+      "Planos especiais para nômades digitais e estudantes com cozinha equipada, lavanderia e ambiente colaborativo.",
+  },
+];
+
+const amenities = [
+  "Cozinha compartilhada completa",
+  "Áreas internas e externas para coworking",
+  "Internet fibra óptica super veloz",
+  "Terraço com vista para a Lagoa",
+  "Lounges com ar-condicionado e smart TV",
+  "Armários com fechadura em todos os quartos",
+  "Café e chá disponíveis 24h",
+  "Estacionamento rotativo gratuito na rua",
+];
+
+const experiences = [
+  {
+    name: "Tours guiados e experiências locais",
+    detail:
+      "Trilhas na Costa da Lagoa, passeios de stand up paddle, tours gastronômicos e conexão com anfitriões parceiros.",
+  },
+  {
+    name: "Coworking criativo",
+    detail:
+      "Espaços com ergonomia, boa iluminação e tomadas estrategicamente posicionadas para focar no trabalho ou nos estudos.",
+  },
+  {
+    name: "Comunidade global",
+    detail:
+      "Eventos de integração, noites temáticas e networking com viajantes de diversas partes do mundo.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Como faço minha reserva?",
+    answer:
+      "Todas as reservas são feitas diretamente pelo WhatsApp da anfitriã. Clique em qualquer botão do site para iniciar a conversa e garantir a melhor tarifa.",
+  },
+  {
+    question: "O hostel é perto da praia?",
+    answer:
+      "Estamos a 10 minutos das praias Mole e Joaquina e a poucos passos da orla da Lagoa da Conceição, com fácil acesso de transporte público e bikes compartilhadas.",
+  },
+  {
+    question: "Tem espaço para trabalhar?",
+    answer:
+      "Sim! Oferecemos coworking interno climatizado, varandas com mesas, internet fibra óptica e salas silenciosas para reuniões online.",
+  },
+  {
+    question: "O café da manhã está incluso?",
+    answer:
+      "Oferecemos uma estação de café e chá 24h. Parcerias com cafeterias locais garantem descontos especiais para hóspedes.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Camila, São Paulo",
+    content:
+      "Atendimento impecável da anfitriã! As dicas de passeios fizeram toda a diferença na minha viagem solo.",
+  },
+  {
+    name: "Lucas, Buenos Aires",
+    content:
+      "Espaço perfeito para trabalho remoto. Internet rápida, áreas silenciosas e uma vista incrível da Lagoa.",
+  },
+  {
+    name: "Maria & João, Curitiba",
+    content:
+      "Escolhemos o quarto privativo e parecia um boutique hotel. Voltaremos com certeza!",
+  },
+];
 
 const whatsappLink =
   "https://wa.me/5548999999999?text=Ol%C3%A1%20quero%20garantir%20minha%20reserva%20no%20Click%20Hostel!";
@@ -228,82 +335,23 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="pointer-events-none absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-cyan-400/40 via-emerald-400/20 to-transparent blur-3xl" />
-              <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 p-6 shadow-[0_40px_80px_-40px_rgba(16,185,129,0.45)]">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {heroImages.map((image, index) => (
-                    <div
-                      key={image.src}
-                      className={`relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 ${
-                        index === 0 ? "sm:col-span-2 aspect-[16/9]" : ""
-                      }`}
-                    >
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        priority={index === 0}
-                        sizes={index === 0 ? "(min-width: 1024px) 540px, 100vw" : "(min-width: 1024px) 260px, 50vw"}
-                        className="object-cover"
-                      />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-                      <p className="absolute bottom-3 left-3 max-w-[80%] text-xs font-medium uppercase tracking-[0.25em] text-white/80">
-                        Click Hostel
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 space-y-4">
+              <div className="absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-cyan-400/30 via-emerald-400/20 to-transparent blur-3xl" />
+              <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/10 p-8 shadow-[0_40px_80px_-40px_rgba(16,185,129,0.45)]">
+                <div className="space-y-6">
                   {highlights.map((highlight) => (
                     <div
                       key={highlight.title}
                       className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-inner shadow-black/20"
                     >
-                      <h3 className="text-lg font-semibold text-white">{highlight.title}</h3>
-                      <p className="mt-2 text-sm text-slate-200/80">{highlight.description}</p>
+                      <h3 className="text-lg font-semibold text-white">
+                        {highlight.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-slate-200/80">
+                        {highlight.description}
+                      </p>
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="space-y-8">
-            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <h2 className="text-3xl font-semibold text-white sm:text-4xl">Galeria para sentir a vibe</h2>
-                <p className="mt-3 max-w-2xl text-base text-slate-200/80">
-                  Se inspire com ambientes que combinam design brasileiro, conforto e a luz única da Lagoa da Conceição.
-                </p>
-              </div>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-emerald-400/60 px-6 py-3 text-sm font-semibold text-emerald-200 transition hover:bg-emerald-400/20"
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Reservar tour virtual pelo WhatsApp
-              </a>
-            </div>
-            <div className="-mx-6 overflow-x-auto pb-6 md:-mx-10 lg:-mx-16">
-              <div className="flex w-max gap-6 px-6 md:px-10 lg:px-16">
-                {galleryImages.map((image) => (
-                  <div
-                    key={image.src}
-                    className="group relative h-64 w-[280px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-lg shadow-black/40 transition duration-300 hover:border-emerald-400/60 hover:shadow-emerald-400/40 md:h-72 md:w-[360px]"
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      sizes="(min-width: 1024px) 360px, 70vw"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-4 text-sm font-medium text-white">
-                      {image.alt}
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </section>
@@ -331,33 +379,24 @@ export default function Home() {
               {accommodationTypes.map((item) => (
                 <article
                   key={item.title}
-                  className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.08] transition duration-300 hover:border-emerald-400/70 hover:bg-white/[0.12]"
+                  className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.08] p-8 transition duration-300 hover:border-emerald-400/70 hover:bg-white/[0.12]"
                 >
                   <div className="pointer-events-none absolute inset-0 translate-y-12 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-cyan-400/10 to-transparent" />
                   </div>
-                  <div className="relative h-56 w-full overflow-hidden rounded-b-[36px] rounded-t-[36px] border-b border-white/10">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      sizes="(min-width: 1024px) 320px, 90vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="space-y-4 p-8">
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                    <p className="text-sm leading-relaxed text-slate-200/80">{item.description}</p>
-                    <div>
-                      <a
-                        className="inline-flex items-center text-sm font-semibold text-emerald-200 transition hover:text-emerald-100"
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Quero saber mais →
-                      </a>
-                    </div>
+                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-200/80">
+                    {item.description}
+                  </p>
+                  <div className="mt-6">
+                    <a
+                      className="inline-flex items-center text-sm font-semibold text-emerald-200 transition hover:text-emerald-100"
+                      href={whatsappLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Quero saber mais →
+                    </a>
                   </div>
                 </article>
               ))}
