@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    domains: [
+      "images.unsplash.com",
+      "datehouse.com.br",
+      "www.datehouse.com.br",
+    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -16,6 +21,7 @@ const nextConfig: NextConfig = {
         hostname: "www.datehouse.com.br",
       },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
