@@ -49,16 +49,21 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* ✅ Google Tag (gtag.js) */}
+        {/* ✅ Google Tag Manager - carrega apenas UMA vez */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11500796462"
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZKBRH9XFJ6"
           strategy="afterInteractive"
         />
-        <Script id="google-ads-tag" strategy="afterInteractive">
+        <Script id="google-tags" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
+            // ✅ Inicializa Google Analytics
+            gtag('config', 'G-ZKBRH9XFJ6');
+
+            // ✅ Inicializa Google Ads
             gtag('config', 'AW-11500796462');
           `}
         </Script>
