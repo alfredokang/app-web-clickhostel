@@ -30,3 +30,17 @@ A plataforma conecta viajantes, expositores, atletas e famílias a acomodações
 ---
 
 ## 🚀 Estrutura do Projeto
+
+**src/**
+
+**src/app/**
+
+**src/app/layout.tsx** # Layout global e SEO
+
+**src/app/page.tsx** # Página principal (home)
+
+**src/components/** # Componentes reutilizáveis (ex: ImageWithFallback)
+
+**src/data/** # Dados mockados (imagens, FAQ, etc.)
+
+**public/** # Assets públicos e SEO (robots.txt, sitemap.xml)
