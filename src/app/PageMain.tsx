@@ -380,7 +380,7 @@ export default function PageMain() {
                 </h2>
                 <p className="mt-3 max-w-2xl text-base text-slate-200/80">
                   Conheça experiências reais de hóspedes que viveram São Paulo
-                  com o cuidado da anfitrião da Click Hostel.
+                  com o cuidado do anfitrião da Click Hostel.
                 </p>
               </div>
               <a
