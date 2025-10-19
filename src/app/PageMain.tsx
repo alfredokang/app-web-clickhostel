@@ -360,7 +360,7 @@ export default function PageMain() {
                 </div>
               ))}
               <a
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                className="text-center mt-6 inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:-translate-y-1 hover:bg-emerald-300"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-experiences")}
                 target="_blank"
