@@ -71,6 +71,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // ✅ Converte a data atual para o fuso de São Paulo
+    const dateInSaoPaulo = new Date()
+      .toLocaleString("sv-SE", {
+        timeZone: "America/Sao_Paulo",
+      })
+      .replace(" ", "T"); // mantém o formato ISO-like (YYYY-MM-DDTHH:mm:ss)
+
     // ✅ Salva no Realtime Database
     const whatsAppClickRef = ref(database, "whatsapp_clicks");
     const newWhatsAppClickRef = await push(whatsAppClickRef, {
@@ -88,7 +95,7 @@ export async function POST(request: NextRequest) {
       utmMedium,
       utmSource,
       ip,
-      createdAt: new Date().toISOString(),
+      createdAt: dateInSaoPaulo,
     });
 
     return NextResponse.json({
