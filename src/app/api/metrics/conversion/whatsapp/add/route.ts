@@ -72,11 +72,22 @@ export async function POST(request: NextRequest) {
     }
 
     // ✅ Converte a data atual para o fuso de São Paulo
-    const dateInSaoPaulo = new Date()
-      .toLocaleString("sv-SE", {
-        timeZone: "America/Sao_Paulo",
-      })
-      .replace(" ", "T"); // mantém o formato ISO-like (YYYY-MM-DDTHH:mm:ss)
+    const formatter = new Intl.DateTimeFormat("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    const parts = formatter.formatToParts(new Date());
+    const get = (type: string) => parts.find((p) => p.type === type)?.value;
+
+    const dateInSaoPaulo = `${get("year")}-${get("month")}-${get("day")}T${get(
+      "hour"
+    )}:${get("minute")}:${get("second")}`;
 
     // ✅ Salva no Realtime Database
     const whatsAppClickRef = ref(database, "whatsapp_clicks");

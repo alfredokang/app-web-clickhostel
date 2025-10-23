@@ -47,16 +47,32 @@ export default function PageMain() {
               <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.4em] text-cyan-200/90">
                 hospedagem inteligente
               </span>
-              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Mais que hospedagem: conforto e atenção em cada detalhe
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-5xl">
+                Hospedagem sob medida para Atletas PCD, Montadores de Stands,
+                Expositores e Visitantes da SP Expo Imigrantes
               </h1>
               <p className="text-lg text-slate-200/80 sm:text-xl">
-                O Click Hostel é mais do que uma hospedagem: é um espaço para
-                viver São Paulo com conforto, criatividade e atenção sob medida
-                — com quartos e suítes que acomodam desde viajantes individuais
-                até grandes grupos, tudo no seu ritmo e do seu jeito, e com um
-                anfitrião sempre disponível para oferecer um atendimento
-                impecável e personalizado.
+                A apenas 100 a 800 metros do São Paulo Expo e do CT Paralímpico,
+                a Click Hostel é o ponto certo para quem vem montar, visitar ou
+                competir em São Paulo.
+              </p>
+              <p className="text-lg text-slate-200/80 sm:text-xl">
+                São 7 unidades e mais de 120 vagas, com conforto, praticidade e
+                atendimento personalizado — tudo perto de onde o evento
+                acontece!
+              </p>
+              <p className="text-lg text-slate-200/80 sm:text-xl">
+                Hospedagem com café da manhã e kit cortesia, Wi-Fi rápido,
+                suporte completo sobre a região e traslado ao CT para
+                cadeirantes com veículo próprio.
+              </p>
+              <p className="text-lg text-slate-200/80 sm:text-xl">
+                Mais de 2.800 clientes atendidos por ano, entre montadores,
+                visitantes e atletas, comprovam nossa excelência e confiança.
+              </p>
+              <p className="text-lg text-slate-200/80 sm:text-xl font-bold">
+                Garanta sua vaga agora e hospede-se com quem entende a rotina de
+                quem faz o São Paulo Expo acontecer!
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
@@ -86,22 +102,22 @@ export default function PageMain() {
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                   <p className="text-3xl font-semibold text-emerald-300">
-                    300m
+                    100m
                   </p>
                   <p className="text-sm text-slate-200/70">
-                    Localização privilegiada: a 300 m do Expo Imigrantes e do
+                    Localização privilegiada: a 100m da Expo Imigrantes e do
                     Comitê Paralímpico Brasileiro, com acesso rápido às
                     principais avenidas.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                   <p className="text-3xl font-semibold text-emerald-300">
-                    Prime
+                    Preço
                   </p>
                   <p className="text-sm text-slate-200/70">
-                    Preço justo, atendimento impecável e o melhor
-                    custo-benefício para a sua viagem — tudo isso com um café da
-                    manhã delicioso incluso.
+                    Precificação inteligente por categoria para o melhor custo X
+                    beneficio para ASSOCIAÇÕES, PCD, MONTADORES, VISITANTES E
+                    PRESTADORES
                   </p>
                 </div>
               </div>

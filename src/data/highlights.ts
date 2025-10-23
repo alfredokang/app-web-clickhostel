@@ -7,11 +7,11 @@ export const highlights = [
   {
     title: "Experiência Personalizada",
     description:
-      "Anfitrião sempre presente para garantir uma estadia tranquila, com suporte dedicado, dicas locais, roteiros exclusivos e café da manhã incluso.",
+      "Colaboradores sempre atentos a sua necessidade para garantir uma experiência tranquila e segura, dicas locais, roteiros exclusivos e limpeza periódica dos ambientes.",
   },
   {
     title: "Flexibilidade Total",
     description:
-      "Quartos privativos e compartilhados, diárias flexíveis, espaços para trabalho remoto e estrutura completa para estadias longas ou curtas.",
+      "Quartos privativos e compartilhados, diárias flexíveis e espaços ideais para trabalho remoto. Estrutura completa para estadias curtas ou longas, além de ambientes perfeitos para pequenos eventos corporativos, festas de fim de ano e casamentos — tudo com piscina e muito conforto.",
   },
 ];
