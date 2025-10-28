@@ -336,7 +336,7 @@ export default function PageMain() {
           </section>
 
           {/* EXPERIENCES */}
-          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-slate-900/70 p-10 shadow-[0_40px_80px_-60px_rgba(14,165,233,0.4)] lg:grid-cols-[1.1fr_0.9fr]">
+          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-slate-900/70 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.35)] lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">
                 Trabalhe, conecte-se e relaxe
