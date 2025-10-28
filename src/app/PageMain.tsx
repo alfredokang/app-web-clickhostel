@@ -22,9 +22,12 @@ export default function PageMain() {
         {/* HEADER */}
         <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-lg">
           <div className="flex items-center">
-            <img src="/images/logo/logoClickHostel.png" className="w-10 mr-1" />
+            <img
+              src="/images/logo/logoCH.png"
+              className="w-8 mr-2 rounded-full object-cover"
+            />
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-cyan-200/80">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#f28b8f]">
                 Click Hostel
               </p>
               <p className="text-sm font-medium text-slate-100/80">
@@ -33,7 +36,7 @@ export default function PageMain() {
             </div>
           </div>
           <a
-            className="hidden items-center gap-2 rounded-full bg-emerald-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:scale-105 hover:bg-emerald-300 md:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-[#e44c5a] px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-red-300/40 transition hover:scale-105 hover:bg-[#ee6d74] md:inline-flex"
             href={whatsappLink}
             onClick={() => trackWhatsAppClick("whatsapp-home-header")}
             target="_blank"
@@ -47,7 +50,7 @@ export default function PageMain() {
           {/* HERO */}
           <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-8">
-              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.4em] text-cyan-200/90">
+              <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.4em] text-[#f28b8f]">
                 hospedagem inteligente
               </span>
               <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-5xl">
@@ -79,7 +82,7 @@ export default function PageMain() {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <a
-                  className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:translate-y-[-2px] hover:bg-emerald-300"
+                  className="inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:translate-y-[-2px] hover:bg-rose-400"
                   href={whatsappLink}
                   onClick={() => trackWhatsAppClick("whatsapp-home-hero")}
                   target="_blank"
@@ -88,7 +91,7 @@ export default function PageMain() {
                   Falar com o anfitrião no WhatsApp
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white/90 transition hover:border-emerald-400/80 hover:text-emerald-200"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-base font-semibold text-white/90 transition hover:border-rose-500 hover:text-rose-400"
                   href="#acomodacoes"
                 >
                   Ver acomodações
@@ -96,17 +99,13 @@ export default function PageMain() {
               </div>
               <div className="grid gap-6 sm:grid-cols-3">
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-3xl font-semibold text-emerald-300">
-                    4.9/5
-                  </p>
+                  <p className="text-3xl font-semibold text-rose-500">4.9/5</p>
                   <p className="text-sm text-slate-200/70">
                     Avaliação média dos hóspedes que se hospedaram conosco.
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-3xl font-semibold text-emerald-300">
-                    100m
-                  </p>
+                  <p className="text-3xl font-semibold text-rose-500">100m</p>
                   <p className="text-sm text-slate-200/70">
                     Localização privilegiada: a 100m da Expo Imigrantes e do
                     Comitê Paralímpico Brasileiro, com acesso rápido às
@@ -114,9 +113,7 @@ export default function PageMain() {
                   </p>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                  <p className="text-3xl font-semibold text-emerald-300">
-                    Preço
-                  </p>
+                  <p className="text-3xl font-semibold text-rose-500">Preço</p>
                   <p className="text-sm text-slate-200/70">
                     Precificação inteligente por categoria para o melhor custo X
                     beneficio para ASSOCIAÇÕES, PCD, MONTADORES, VISITANTES E
@@ -127,8 +124,8 @@ export default function PageMain() {
             </div>
 
             <div className="relative">
-              <div className="pointer-events-none absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-cyan-400/40 via-emerald-400/20 to-transparent blur-3xl" />
-              <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 p-6 shadow-[0_40px_80px_-40px_rgba(16,185,129,0.45)]">
+              <div className="pointer-events-none absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-rose-400/40 via-rose-400/20 to-transparent blur-3xl" />
+              <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/5 p-6 shadow-[0_40px_80px_-40px_rgba(244,63,94,0.45)]">
                 <div className="grid gap-4 sm:grid-cols-2">
                   {heroImages.map((image, index) => (
                     <div
@@ -159,8 +156,8 @@ export default function PageMain() {
                 </div>
 
                 <div className="mt-6 space-y-4">
-                  <div className="absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-cyan-400/30 via-emerald-400/20 to-transparent blur-3xl" />
-                  <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/10 p-8 shadow-[0_40px_80px_-40px_rgba(16,185,129,0.45)]">
+                  <div className="absolute inset-0 -z-10 rounded-[40px] bg-gradient-to-br from-rose-400/30 via-rose-400/20 to-transparent blur-3xl" />
+                  <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/10 p-8 shadow-[0_40px_80px_-40px_rgba(244,63,94,0.45)]">
                     <div className="space-y-6">
                       {highlights.map((highlight) => (
                         <div
@@ -196,7 +193,7 @@ export default function PageMain() {
                 </p>
               </div>
               <a
-                className="inline-flex items-center justify-center rounded-full border border-emerald-400/60 px-6 py-3 text-sm font-semibold text-emerald-200 transition hover:bg-emerald-400/20"
+                className="text-center inline-flex items-center justify-center rounded-full border border-red-400/60 px-6 py-3 text-sm font-semibold text-red-200 transition hover:bg-red-400/20"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-gallery")}
                 target="_blank"
@@ -211,7 +208,7 @@ export default function PageMain() {
                 {galleryImages.map((image) => (
                   <div
                     key={image.src}
-                    className="group relative h-64 w-[280px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-lg shadow-black/40 transition duration-300 hover:border-emerald-400/60 hover:shadow-emerald-400/40 md:h-72 md:w-[360px]"
+                    className="group relative h-64 w-[280px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-lg shadow-black/40 transition duration-300 hover:border-rose-400/60 hover:shadow-rose-400/40 md:h-72 md:w-[360px]"
                   >
                     <ImageWithFallback
                       src={image.src}
@@ -277,7 +274,7 @@ export default function PageMain() {
                 </p>
               </div>
               <a
-                className="text-center inline-flex items-center justify-center rounded-full border border-emerald-400/60 px-6 py-3 text-sm font-semibold text-emerald-200 transition hover:bg-emerald-400/20"
+                className="text-center inline-flex items-center justify-center rounded-full border border-rose-400/60 px-6 py-3 text-sm font-semibold text-rose-200 transition hover:bg-rose-400/20"
                 href={whatsappLink}
                 onClick={() =>
                   trackWhatsAppClick("whatsapp-home-accommodationtypes")
@@ -293,10 +290,10 @@ export default function PageMain() {
               {accommodationTypes.map((item) => (
                 <article
                   key={item.title}
-                  className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.08] p-8 transition duration-300 hover:border-emerald-400/70 hover:bg-white/[0.12]"
+                  className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.08] p-8 transition duration-300 hover:border-rose-400/70 hover:bg-white/[0.12]"
                 >
                   <div className="pointer-events-none absolute inset-0 translate-y-12 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-cyan-400/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-rose-500/20 via-rose-400/10 to-transparent" />
                   </div>
 
                   <div className="relative h-56 w-full overflow-hidden rounded-b-[36px] rounded-t-[36px] border-b border-white/10">
@@ -319,7 +316,7 @@ export default function PageMain() {
                     </p>
                     <div>
                       <a
-                        className="inline-flex items-center text-sm font-semibold text-emerald-200 transition hover:text-emerald-100"
+                        className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
                         href={whatsappLink}
                         onClick={() =>
                           trackWhatsAppClick(
@@ -357,7 +354,7 @@ export default function PageMain() {
                     key={amenity}
                     className="flex items-start gap-3 rounded-3xl bg-white/5 px-4 py-3"
                   >
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-rose-400" />
                     <span>{amenity}</span>
                   </li>
                 ))}
@@ -379,7 +376,7 @@ export default function PageMain() {
                 </div>
               ))}
               <a
-                className="text-center mt-6 inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                className="text-center mt-6 inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-experiences")}
                 target="_blank"
@@ -403,7 +400,7 @@ export default function PageMain() {
                 </p>
               </div>
               <a
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-emerald-400/70 hover:text-emerald-200"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-rose-400/70 hover:text-rose-200"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-testimonials")}
                 target="_blank"
@@ -424,10 +421,10 @@ export default function PageMain() {
                     <img
                       src={testimonial.avatar || "/images/default-avatar.jpg"}
                       alt={testimonial.name}
-                      className="h-12 w-12 rounded-full object-cover border border-emerald-400/40"
+                      className="h-12 w-12 rounded-full object-cover border border-rose-400/40"
                     />
                     <div>
-                      <figcaption className="text-sm font-semibold text-emerald-200">
+                      <figcaption className="text-sm font-semibold text-rose-200">
                         {testimonial.name}
                       </figcaption>
                       <p className="text-xs text-slate-400">
@@ -439,7 +436,7 @@ export default function PageMain() {
                   {/* ⭐ Estrelas */}
                   <div className="flex items-center gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <span key={i} className="text-emerald-400 text-lg">
+                      <span key={i} className="text-rose-400 text-lg">
                         ★
                       </span>
                     ))}
@@ -496,7 +493,7 @@ export default function PageMain() {
               </div>
 
               <a
-                className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                className="inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-location")}
                 target="_blank"
@@ -533,7 +530,7 @@ export default function PageMain() {
                 </p>
               </div>
               <a
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-emerald-400/80 hover:text-emerald-200"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-rose-400/80 hover:text-rose-200"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-faqs")}
                 target="_blank"
@@ -547,7 +544,7 @@ export default function PageMain() {
               {faqs.map((faq) => (
                 <details
                   key={faq.question}
-                  className="group rounded-[36px] border border-white/10 bg-white/[0.07] p-6 transition hover:border-emerald-400/60"
+                  className="group rounded-[36px] border border-white/10 bg-white/[0.07] p-6 transition hover:border-rose-400/60"
                 >
                   <summary className="cursor-pointer text-base font-semibold text-white">
                     {faq.question}
@@ -572,7 +569,7 @@ export default function PageMain() {
             </div>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
-                className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-400/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                className="inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
                 href={whatsappLink}
                 onClick={() => trackWhatsAppClick("whatsapp-home-footer")}
                 target="_blank"
@@ -594,7 +591,7 @@ export default function PageMain() {
 
       <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-5 md:hidden">
         <a
-          className="inline-flex w-full max-w-md items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:translate-y-[-1px] hover:bg-emerald-300"
+          className="inline-flex w-full max-w-md items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-[0_20px_40px_-20px_rgba(16,185,129,0.6)] transition hover:translate-y-[-1px] hover:bg-rose-400"
           href={whatsappLink}
           onClick={() => trackWhatsAppClick("whatsapp-home-bottom-button")}
           target="_blank"

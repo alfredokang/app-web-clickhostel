@@ -47,17 +47,17 @@ a {
   }
 
   .custom-scroll::-webkit-scrollbar-thumb {
-    background: #10b981; /* verde do tema */
+    background: #d2273e; /* verde do tema */
     border-radius: 9999px;
   }
 
   .custom-scroll::-webkit-scrollbar-thumb:hover {
-    background: #34d399; /* verde mais claro ao passar o mouse */
+    background: #d2273e; /* verde mais claro ao passar o mouse */
   }
 }
 
 /* (Opcional) para mobile - se quiser a barra bonita lá também */
 .custom-scroll {
-  scrollbar-color: #10b981 #0f172a;
+  scrollbar-color: #d2273e #0f172a;
   scrollbar-width: thin;
 }
