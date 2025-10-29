@@ -102,7 +102,10 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
           <div className="flex w-full max-w-5xl items-center gap-4" onClick={(event) => event.stopPropagation()}>
             <button
               type="button"
-              onClick={showPrevious}
+              onClick={(event) => {
+                event.stopPropagation();
+                showPrevious();
+              }}
               className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-emerald-300 hover:bg-emerald-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:inline-flex"
               aria-label="Ver imagem anterior"
             >
@@ -121,7 +124,10 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
             </div>
             <button
               type="button"
-              onClick={showNext}
+              onClick={(event) => {
+                event.stopPropagation();
+                showNext();
+              }}
               className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-emerald-300 hover:bg-emerald-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:inline-flex"
               aria-label="Ver próxima imagem"
             >
@@ -141,7 +147,10 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
               fechar
             </button>
           </div>
-          <div className="flex w-full max-w-5xl gap-3 overflow-x-auto pb-2">
+          <div
+            className="flex w-full max-w-5xl gap-3 overflow-x-auto pb-2"
+            onClick={(event) => event.stopPropagation()}
+          >
             {images.map((image, index) => (
               <button
                 key={`${image.src}-thumb`}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { type ImageProps } from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ImageWithFallbackProps = Omit<ImageProps, "src" | "alt"> & {
   src: string;
@@ -11,6 +11,10 @@ type ImageWithFallbackProps = Omit<ImageProps, "src" | "alt"> & {
 
 export function ImageWithFallback({ src, fallbackSrc, alt, ...rest }: ImageWithFallbackProps) {
   const [currentSrc, setCurrentSrc] = useState(src);
+
+  useEffect(() => {
+    setCurrentSrc(src);
+  }, [src]);
 
   return (
     <Image
