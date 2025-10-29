@@ -15,8 +15,14 @@ export function generateStaticParams() {
   return properties.map((property) => ({ slug: property.slug }));
 }
 
-export function generateMetadata({ params }: PropertyPageProps): Metadata {
-  const property = properties.find((item) => item.slug === params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = await Promise.resolve(params);
+
+  const property = properties.find((item) => item.slug === slug);
 
   if (!property) {
     return {
@@ -30,8 +36,9 @@ export function generateMetadata({ params }: PropertyPageProps): Metadata {
   };
 }
 
-export default function PropertyPage({ params }: PropertyPageProps) {
-  const property = properties.find((item) => item.slug === params.slug);
+export default async function PropertyPage({ params }: PropertyPageProps) {
+  const { slug } = await Promise.resolve(params);
+  const property = properties.find((item) => item.slug === slug);
 
   if (!property) {
     notFound();
@@ -45,7 +52,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 pb-24 pt-10 md:gap-20 md:px-10 lg:px-16">
         <nav className="flex items-center justify-between text-sm text-slate-200/70">
           <Link
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 transition hover:border-emerald-300 hover:text-emerald-200"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 transition hover:border-rose-300 hover:text-rose-200"
             href="/hospedagens"
           >
             <span aria-hidden className="text-lg">
@@ -58,15 +65,17 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </span>
         </nav>
 
-        <header className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(16,185,129,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
+        <header className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
-            <span className="inline-flex items-center rounded-full border border-emerald-300/40 bg-emerald-400/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.35em] text-emerald-100">
+            <span className="inline-flex items-center rounded-full border border-rose-300/40 bg-rose-400/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.35em] text-rose-100">
               hospedagem acessível
             </span>
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
               {property.name}
             </h1>
-            <p className="text-base text-slate-200/80">{property.shortDescription}</p>
+            <p className="text-base text-slate-200/80">
+              {property.shortDescription}
+            </p>
             <div className="flex flex-wrap gap-3 text-xs font-medium text-slate-200/70">
               <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
                 {property.distance}
@@ -85,8 +94,11 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </div>
             <div className="grid gap-3 text-sm text-slate-200/80">
               {property.highlights.map((highlight) => (
-                <p key={`${property.slug}-${highlight}`} className="flex items-start gap-2">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <p
+                  key={`${property.slug}-${highlight}`}
+                  className="flex items-start gap-2"
+                >
+                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-rose-400" />
                   <span>{highlight}</span>
                 </p>
               ))}
@@ -101,11 +113,14 @@ export default function PropertyPage({ params }: PropertyPageProps) {
                 </span>
               ))}
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="text-center flex flex-col gap-3 sm:flex-row sm:items-center">
               <WhatsAppCta trackingId={`whatsapp-detalhe-${property.slug}`}>
                 Reservar esta hospedagem agora
               </WhatsAppCta>
-              <WhatsAppCta trackingId={`whatsapp-detalhe-${property.slug}-pacotes`} variant="outline">
+              <WhatsAppCta
+                trackingId={`whatsapp-detalhe-${property.slug}-pacotes`}
+                variant="outline"
+              >
                 Solicitar pacote para grupos
               </WhatsAppCta>
             </div>
@@ -135,17 +150,22 @@ export default function PropertyPage({ params }: PropertyPageProps) {
 
         <section className="grid gap-10 rounded-[40px] border border-white/10 bg-white/5 p-10 md:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
-            <h2 className="text-2xl font-semibold text-white">Infraestrutura acessível e pronta para a sua equipe</h2>
+            <h2 className="text-2xl font-semibold text-white">
+              Infraestrutura acessível e pronta para a sua equipe
+            </h2>
             <p className="text-sm text-slate-200/80">
-              Cada detalhe foi pensado para receber cadeirantes, atletas paralímpicos e equipes que precisam de agilidade antes e depois dos eventos. Rampas niveladas, portas largas e banheiros adaptados garantem conforto e autonomia.
+              Cada detalhe foi pensado para receber cadeirantes, atletas
+              paralímpicos e equipes que precisam de agilidade antes e depois
+              dos eventos. Rampas niveladas, portas largas e banheiros adaptados
+              garantem conforto e autonomia.
             </p>
             <ul className="grid gap-3 text-sm text-slate-200/80 sm:grid-cols-2">
               {property.accessibilityHighlights.map((item) => (
                 <li
                   key={`${property.slug}-access-${item}`}
-                  className="flex items-start gap-3 rounded-3xl border border-emerald-300/30 bg-emerald-400/10 px-4 py-3"
+                  className="flex items-start gap-3 rounded-3xl border border-rose-300/30 bg-rose-400/10 px-4 py-3"
                 >
-                  <span className="mt-1 text-lg text-emerald-200">♿</span>
+                  <span className="mt-1 text-lg text-rose-200">♿</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -153,14 +173,23 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
 
           <div className="space-y-4 rounded-[32px] border border-white/10 bg-slate-950/60 p-6 shadow-inner shadow-black/30">
-            <h3 className="text-lg font-semibold text-white">Pacotes e operações especiais</h3>
+            <h3 className="text-lg font-semibold text-white">
+              Pacotes e operações especiais
+            </h3>
             <p className="text-sm text-slate-200/80">
-              Trabalhamos com atletas paralímpicos, montadores de stands, caravanas corporativas e equipes que precisam de logística contínua perto do São Paulo Expo e do CT Paralímpico. Ajustamos alimentação, transporte e day use de acordo com o seu cronograma.
+              Trabalhamos com atletas paralímpicos, montadores de stands,
+              caravanas corporativas e equipes que precisam de logística
+              contínua perto do São Paulo Expo e do CT Paralímpico. Ajustamos
+              alimentação, transporte e day use de acordo com o seu cronograma.
             </p>
             <p className="text-sm text-slate-200/70">
-              Disponibilizamos apoio 24h, check-in flexível e acompanhamento próximo para que cada etapa da estadia seja produtiva e sem imprevistos.
+              Disponibilizamos apoio 24h, check-in flexível e acompanhamento
+              próximo para que cada etapa da estadia seja produtiva e sem
+              imprevistos.
             </p>
-            <WhatsAppCta trackingId={`whatsapp-detalhe-${property.slug}-consultor`}>
+            <WhatsAppCta
+              trackingId={`whatsapp-detalhe-${property.slug}-consultor`}
+            >
               Conversar com um consultor especializado
             </WhatsAppCta>
           </div>
@@ -169,9 +198,12 @@ export default function PropertyPage({ params }: PropertyPageProps) {
         <section className="space-y-6">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-3xl font-semibold text-white">Galeria completa da {property.name}</h2>
+              <h2 className="text-3xl font-semibold text-white">
+                Galeria completa da {property.name}
+              </h2>
               <p className="mt-2 text-base text-slate-200/80">
-                Explore os ambientes e planeje a distribuição da sua equipe com antecedência.
+                Explore os ambientes e planeje a distribuição da sua equipe com
+                antecedência.
               </p>
             </div>
             <span className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
@@ -179,23 +211,33 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </span>
           </div>
 
-          <PropertyGallery images={property.gallery} propertyName={property.name} />
+          <PropertyGallery
+            images={property.gallery}
+            propertyName={property.name}
+          />
         </section>
 
         <section className="rounded-[40px] border border-white/10 bg-white/5 p-8">
           <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-center">
             <div className="space-y-3">
-              <h2 className="text-3xl font-semibold text-white">Pronto para reservar?</h2>
+              <h2 className="text-3xl font-semibold text-white">
+                Pronto para reservar?
+              </h2>
               <p className="text-base text-slate-200/80">
-                Compartilhe a data do seu evento, quantidade de pessoas e necessidades específicas de acessibilidade. Vamos preparar uma proposta completa, com pacotes especiais para longas temporadas, festas privadas ou day use.
+                Compartilhe a data do seu evento, quantidade de pessoas e
+                necessidades específicas de acessibilidade. Vamos preparar uma
+                proposta completa, com pacotes especiais para longas temporadas,
+                festas privadas ou day use.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
-              <WhatsAppCta trackingId={`whatsapp-detalhe-${property.slug}-fechamento`}>
+            <div className="text-center flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <WhatsAppCta
+                trackingId={`whatsapp-detalhe-${property.slug}-fechamento`}
+              >
                 Garantir minha vaga
               </WhatsAppCta>
               <Link
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-emerald-300 hover:text-emerald-200"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-rose-300 hover:text-rose-200"
                 href="/"
               >
                 Voltar para a página inicial

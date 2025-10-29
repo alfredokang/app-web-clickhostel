@@ -10,7 +10,10 @@ interface PropertyGalleryProps {
   propertyName: string;
 }
 
-export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) {
+export function PropertyGallery({
+  images,
+  propertyName,
+}: PropertyGalleryProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -66,13 +69,16 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
   return (
     <>
       <div className="relative">
-        <div className="flex gap-4 overflow-x-auto pb-6 pl-1 pr-4 md:pr-6" aria-label={`Galeria de imagens da ${propertyName}`}>
+        <div
+          className="flex gap-4 overflow-x-auto pb-6 pl-1 pr-4 md:pr-6 custom-scroll"
+          aria-label={`Galeria de imagens da ${propertyName}`}
+        >
           {images.map((image, index) => (
             <button
               key={image.src}
               type="button"
               onClick={() => openModal(index)}
-              className="group relative h-64 min-w-[280px] flex-shrink-0 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 text-left transition hover:border-emerald-300/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+              className="group relative h-64 min-w-[280px] flex-shrink-0 overflow-hidden rounded-[32px] border border-white/10 bg-white/5 text-left transition hover:border-rose-300/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
             >
               <ImageWithFallback
                 src={image.src}
@@ -83,7 +89,9 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
                 className="object-cover transition duration-500 group-hover:scale-105"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-              <p className="absolute bottom-3 left-3 right-3 text-xs font-medium text-white/80">{image.alt}</p>
+              <p className="absolute bottom-3 left-3 right-3 text-xs font-medium text-white/80">
+                {image.alt}
+              </p>
             </button>
           ))}
         </div>
@@ -95,18 +103,23 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`Visualizando imagem ${currentIndex + 1} de ${images.length} da ${propertyName}`}
+          aria-label={`Visualizando imagem ${currentIndex + 1} de ${
+            images.length
+          } da ${propertyName}`}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-slate-950/95 p-6 backdrop-blur"
           onClick={closeModal}
         >
-          <div className="flex w-full max-w-5xl items-center gap-4" onClick={(event) => event.stopPropagation()}>
+          <div
+            className="flex w-full max-w-5xl items-center gap-4"
+            onClick={(event) => event.stopPropagation()}
+          >
             <button
               type="button"
               onClick={(event) => {
                 event.stopPropagation();
                 showPrevious();
               }}
-              className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-emerald-300 hover:bg-emerald-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:inline-flex"
+              className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-rose-300 hover:bg-rose-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 sm:inline-flex"
               aria-label="Ver imagem anterior"
             >
               ←
@@ -128,7 +141,7 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
                 event.stopPropagation();
                 showNext();
               }}
-              className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-emerald-300 hover:bg-emerald-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:inline-flex"
+              className="hidden rounded-full border border-white/20 bg-white/10 p-3 text-white transition hover:border-rose-300 hover:bg-rose-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300 sm:inline-flex"
               aria-label="Ver próxima imagem"
             >
               →
@@ -138,17 +151,19 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
             <span>
               {currentIndex + 1} / {images.length}
             </span>
-            <p className="max-w-[75%] text-right leading-relaxed text-white/70">{images[currentIndex].alt}</p>
+            <p className="max-w-[75%] text-right leading-relaxed text-white/70">
+              {images[currentIndex].alt}
+            </p>
             <button
               type="button"
               onClick={closeModal}
-              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70 transition hover:border-emerald-300 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+              className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/70 transition hover:border-rose-300 hover:text-rose-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
             >
               fechar
             </button>
           </div>
           <div
-            className="flex w-full max-w-5xl gap-3 overflow-x-auto pb-2"
+            className="flex w-full max-w-5xl gap-3 overflow-x-auto pb-2 custom-scroll"
             onClick={(event) => event.stopPropagation()}
           >
             {images.map((image, index) => (
@@ -158,9 +173,9 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
                 onClick={() => setCurrentIndex(index)}
                 className={`relative h-20 w-28 flex-shrink-0 overflow-hidden rounded-2xl border ${
                   currentIndex === index
-                    ? "border-emerald-300/70"
-                    : "border-white/10 hover:border-emerald-200/40"
-                } bg-white/5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300`}
+                    ? "border-rose-300/70"
+                    : "border-white/10 hover:border-rose-200/40"
+                } bg-white/5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300`}
               >
                 <ImageWithFallback
                   src={image.src}
@@ -171,7 +186,10 @@ export function PropertyGallery({ images, propertyName }: PropertyGalleryProps) 
                   className="object-cover"
                 />
                 {currentIndex === index ? (
-                  <span className="absolute inset-0 border-2 border-emerald-300/70" aria-hidden />
+                  <span
+                    className="absolute inset-0 border-2 border-rose-300/70"
+                    aria-hidden
+                  />
                 ) : null}
               </button>
             ))}

@@ -41,7 +41,7 @@ export default function PageMain() {
     "Pacotes com alimentação e day use inclusos",
   ];
 
-  const featuredProperties = properties.slice(0, 3);
+  const featuredProperties = properties.slice(0, 6);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
@@ -213,20 +213,14 @@ export default function PageMain() {
           <section className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-200">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="size-7"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 2.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-                    <path d="M7.498 5.907a1.125 1.125 0 0 0-2.052.876l1.507 3.535-2.21 1.772a1.125 1.125 0 0 0 .198 1.908l2.94 1.47v4.907a1.125 1.125 0 0 0 1.125 1.125h1.5a1.125 1.125 0 0 0 1.125-1.125v-3.75h1.5v3.75a1.125 1.125 0 0 0 1.125 1.125h1.5a1.125 1.125 0 0 0 1.125-1.125v-4.907l2.94-1.47a1.125 1.125 0 0 0 .198-1.908l-2.21-1.772 1.507-3.535a1.125 1.125 0 0 0-2.052-.876L14.69 9.75H9.31L7.498 5.907Z" />
-                  </svg>
+                <div className="flex h-14 w-25 items-center justify-center rounded-full bg-rose-400/20 text-rose-200">
+                  <img
+                    src="/images/accessibility.png"
+                    className="rounded-full object-cover"
+                  />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-[0.45em] text-emerald-200/80">
+                  <span className="text-xs uppercase tracking-[0.45em] text-rose-200/80">
                     acessibilidade total
                   </span>
                   <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
@@ -235,16 +229,18 @@ export default function PageMain() {
                 </div>
               </div>
               <p className="text-base text-slate-200/80">
-                Algumas das nossas casas já nasceram adaptadas para pessoas com deficiência. Recebemos delegações
-                paralímpicas, montadores e staffs que precisam circular com cadeira de rodas com segurança. Rampas,
-                banheiros acessíveis e equipe treinada garantem conforto antes, durante e depois dos eventos no São Paulo
-                Expo e no CT Paralímpico.
+                Algumas das nossas casas já nasceram adaptadas para pessoas com
+                deficiência. Recebemos delegações paralímpicas, montadores e
+                staffs que precisam circular com cadeira de rodas com segurança.
+                Rampas, banheiros acessíveis e equipe treinada garantem conforto
+                antes, durante e depois dos eventos no São Paulo Expo e no CT
+                Paralímpico.
               </p>
               <div className="flex flex-wrap gap-3">
                 {supportHighlights.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100"
+                    className="rounded-full border border-rose-300/30 bg-rose-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-rose-100"
                   >
                     {item}
                   </span>
@@ -259,23 +255,30 @@ export default function PageMain() {
                     key={pillar.title}
                     className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-inner shadow-black/30"
                   >
-                    <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
-                    <p className="mt-2 text-sm text-slate-200/80">{pillar.description}</p>
+                    <h3 className="text-lg font-semibold text-white">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-slate-200/80">
+                      {pillar.description}
+                    </p>
                   </div>
                 ))}
               </div>
               <a
-                className="inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-300/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                className="inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
                 href={whatsappLink}
-                onClick={() => trackWhatsAppClick("whatsapp-home-accessibility")}
+                onClick={() =>
+                  trackWhatsAppClick("whatsapp-home-accessibility")
+                }
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Quero montar meu plano acessível
+                Quero saber mais
               </a>
               <p className="text-sm text-slate-200/70">
-                Parceiros recorrentes do CT Paralímpico e das principais feiras da cidade. Conte com a Click Hostel para uma
-                experiência realmente inclusiva.
+                Parceiros recorrentes do CT Paralímpico e das principais feiras
+                da cidade. Conte com a Click Hostel para uma experiência
+                realmente inclusiva.
               </p>
             </div>
           </section>
@@ -291,20 +294,21 @@ export default function PageMain() {
                   Conheça nossas casas e escolha a ideal para o seu grupo
                 </h2>
                 <p className="text-base text-slate-200/80">
-                  Temos hospedagens completas, com fotos e detalhes disponíveis em um catálogo exclusivo. Veja ambientes,
-                  entenda a capacidade de cada unidade e planeje pacotes para caravanas, empresas, festas privadas ou day use
-                  com toda a estrutura Click Hostel.
+                  Temos hospedagens completas, com fotos e detalhes disponíveis
+                  em um catálogo exclusivo. Veja ambientes, entenda a capacidade
+                  de cada unidade e planeje pacotes para caravanas, empresas,
+                  festas privadas ou day use com toda a estrutura Click Hostel.
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Link
-                  className="inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
+                  className="text-center inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
                   href="/hospedagens"
                 >
                   Ver catálogo completo
                 </Link>
                 <a
-                  className="inline-flex items-center justify-center rounded-full border border-rose-300/70 px-6 py-3 text-sm font-semibold text-rose-100 transition hover:border-rose-200 hover:text-rose-200"
+                  className="text-center inline-flex items-center justify-center rounded-full border border-rose-300/70 px-6 py-3 text-sm font-semibold text-rose-100 transition hover:border-rose-200 hover:text-rose-200"
                   href={whatsappLink}
                   onClick={() => trackWhatsAppClick("whatsapp-home-catalogo")}
                   target="_blank"
@@ -337,7 +341,9 @@ export default function PageMain() {
                   </div>
                   <div className="space-y-4 pt-6">
                     <div className="space-y-2">
-                      <h3 className="text-xl font-semibold text-white">{property.name}</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        {property.name}
+                      </h3>
                       <p className="text-sm leading-relaxed text-slate-200/80">
                         {property.shortDescription}
                       </p>
@@ -379,8 +385,9 @@ export default function PageMain() {
                 Pacotes especiais para caravanas, empresas, festas e day use
               </p>
               <p className="mt-2 text-rose-50/80">
-                Ajustamos valores e logística para grupos grandes, oferecendo alimentação, infraestrutura para confraternizações
-                e suporte dedicado em toda a estadia.
+                Ajustamos valores e logística para grupos grandes, oferecendo
+                alimentação, infraestrutura para confraternizações e suporte
+                dedicado em toda a estadia.
               </p>
             </div>
           </section>

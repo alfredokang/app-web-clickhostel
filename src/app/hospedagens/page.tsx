@@ -26,7 +26,10 @@ export default function HospedagensPage() {
             Todas as casas Click Hostel em um só lugar
           </h1>
           <p className="mx-auto max-w-3xl text-base text-slate-200/80 md:mx-0">
-            Conheça as unidades pensadas para atletas paralímpicos, montadores, visitantes corporativos e grupos que precisam de estrutura completa. Escolha o imóvel ideal e fale com a nossa equipe para personalizar pacotes, day use ou festas privadas.
+            Conheça as unidades pensadas para atletas paralímpicos, montadores,
+            visitantes corporativos e grupos que precisam de estrutura completa.
+            Escolha o imóvel ideal e fale com a nossa equipe para personalizar
+            pacotes, day use ou festas privadas.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <WhatsAppCta trackingId="whatsapp-catalogo-hero">
@@ -70,7 +73,9 @@ export default function HospedagensPage() {
 
                 <div className="space-y-4 pt-6">
                   <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-white">{property.name}</h2>
+                    <h2 className="text-2xl font-semibold text-white">
+                      {property.name}
+                    </h2>
                     <p className="text-sm leading-relaxed text-slate-200/80">
                       {property.shortDescription}
                     </p>
@@ -90,7 +95,10 @@ export default function HospedagensPage() {
                   </div>
                   <div className="grid gap-2 text-sm text-slate-200/80">
                     {property.highlights.map((highlight) => (
-                      <p key={`${property.slug}-${highlight}`} className="flex items-start gap-2">
+                      <p
+                        key={`${property.slug}-${highlight}`}
+                        className="flex items-start gap-2"
+                      >
                         <span className="mt-1 h-1.5 w-1.5 rounded-full bg-rose-400" />
                         <span>{highlight}</span>
                       </p>
@@ -100,7 +108,7 @@ export default function HospedagensPage() {
                     {property.accessibilityHighlights.map((item) => (
                       <span
                         key={`${property.slug}-${item}`}
-                        className="rounded-full border border-emerald-300/40 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-100"
+                        className="rounded-full border border-rose-300/40 bg-rose-400/10 px-3 py-1 text-[11px] font-medium text-rose-100"
                       >
                         ♿ {item}
                       </span>
@@ -134,11 +142,16 @@ export default function HospedagensPage() {
                 Precisa hospedar uma caravana ou evento corporativo?
               </h2>
               <p className="text-base text-slate-200/80">
-                Criamos combos personalizados com hospedagem, day use, festas privadas e suporte operacional completo. Conte com a Click Hostel para cuidar de toda a logística enquanto sua equipe foca no evento.
+                Criamos combos personalizados com hospedagem, day use, festas
+                privadas e suporte operacional completo. Conte com a Click
+                Hostel para cuidar de toda a logística enquanto sua equipe foca
+                no evento.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
-              <WhatsAppCta trackingId="whatsapp-catalogo-pacotes">Solicitar proposta sob medida</WhatsAppCta>
+            <div className="text-center flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <WhatsAppCta trackingId="whatsapp-catalogo-pacotes">
+                Solicitar proposta sob medida
+              </WhatsAppCta>
               <Link
                 className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-rose-300 hover:text-rose-200"
                 href="/"
