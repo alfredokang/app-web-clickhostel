@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ImageWithFallback } from "@/components/image-with-fallback";
+import { PropertyGallery } from "@/components/property-gallery";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { properties } from "@/data/properties";
 
@@ -178,25 +179,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </span>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {property.gallery.map((image) => (
-              <div
-                key={image.src}
-                className="relative aspect-[4/3] overflow-hidden rounded-[32px] border border-white/10 bg-white/5"
-              >
-                <ImageWithFallback
-                  src={image.src}
-                  fallbackSrc={image.fallbackSrc}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 320px, 90vw"
-                  className="object-cover transition duration-500 hover:scale-105"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-                <p className="absolute bottom-3 left-3 max-w-[80%] text-xs font-medium text-white/80">{image.alt}</p>
-              </div>
-            ))}
-          </div>
+          <PropertyGallery images={property.gallery} propertyName={property.name} />
         </section>
 
         <section className="rounded-[40px] border border-white/10 bg-white/5 p-8">
