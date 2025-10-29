@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { heroImages } from "@/data/hero";
 import { ImageWithFallback } from "../components/image-with-fallback";
 import { highlights } from "@/data/highlights";
@@ -11,8 +13,36 @@ import { experiences } from "@/data/experiences";
 import { faqs } from "@/data/faqs";
 import { whatsappLink } from "@/config/whatsappLink";
 import { trackWhatsAppClick } from "@/utils/trackWhatsAppClick";
+import { properties } from "@/data/properties";
 
 export default function PageMain() {
+  const accessibilityPillars = [
+    {
+      title: "Mobilidade sem barreiras",
+      description:
+        "Rampas sinalizadas, portas largas e rotas contínuas para cadeiras de rodas do portão ao quarto.",
+    },
+    {
+      title: "Quartos e banheiros adaptados",
+      description:
+        "Suítes térreas com barras de apoio, box ampliado e espaço de transferência confortável.",
+    },
+    {
+      title: "Equipe treinada",
+      description:
+        "Time habituado à rotina de atletas paralímpicos, montadores e staffs que precisam de apoio especializado.",
+    },
+  ];
+
+  const supportHighlights = [
+    "Translado adaptado sob demanda",
+    "Check-in flexível para equipes noturnas",
+    "Consultoria para logística de delegações",
+    "Pacotes com alimentação e day use inclusos",
+  ];
+
+  const featuredProperties = properties.slice(0, 3);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.35)_0%,_rgba(15,23,42,0.95)_55%,_rgba(2,6,23,1)_100%)]" />
@@ -176,6 +206,182 @@ export default function PageMain() {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* ACCESSIBILITY SECTION */}
+          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-400/20 text-emerald-200">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="size-7"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2.25a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                    <path d="M7.498 5.907a1.125 1.125 0 0 0-2.052.876l1.507 3.535-2.21 1.772a1.125 1.125 0 0 0 .198 1.908l2.94 1.47v4.907a1.125 1.125 0 0 0 1.125 1.125h1.5a1.125 1.125 0 0 0 1.125-1.125v-3.75h1.5v3.75a1.125 1.125 0 0 0 1.125 1.125h1.5a1.125 1.125 0 0 0 1.125-1.125v-4.907l2.94-1.47a1.125 1.125 0 0 0 .198-1.908l-2.21-1.772 1.507-3.535a1.125 1.125 0 0 0-2.052-.876L14.69 9.75H9.31L7.498 5.907Z" />
+                  </svg>
+                </div>
+                <div>
+                  <span className="text-xs uppercase tracking-[0.45em] text-emerald-200/80">
+                    acessibilidade total
+                  </span>
+                  <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
+                    Hospedagens pensadas para cadeirantes e atletas
+                  </h2>
+                </div>
+              </div>
+              <p className="text-base text-slate-200/80">
+                Algumas das nossas casas já nasceram adaptadas para pessoas com deficiência. Recebemos delegações
+                paralímpicas, montadores e staffs que precisam circular com cadeira de rodas com segurança. Rampas,
+                banheiros acessíveis e equipe treinada garantem conforto antes, durante e depois dos eventos no São Paulo
+                Expo e no CT Paralímpico.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {supportHighlights.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {accessibilityPillars.map((pillar) => (
+                  <div
+                    key={pillar.title}
+                    className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-inner shadow-black/30"
+                  >
+                    <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
+                    <p className="mt-2 text-sm text-slate-200/80">{pillar.description}</p>
+                  </div>
+                ))}
+              </div>
+              <a
+                className="inline-flex w-full items-center justify-center rounded-full bg-emerald-400 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-emerald-300/40 transition hover:-translate-y-1 hover:bg-emerald-300"
+                href={whatsappLink}
+                onClick={() => trackWhatsAppClick("whatsapp-home-accessibility")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quero montar meu plano acessível
+              </a>
+              <p className="text-sm text-slate-200/70">
+                Parceiros recorrentes do CT Paralímpico e das principais feiras da cidade. Conte com a Click Hostel para uma
+                experiência realmente inclusiva.
+              </p>
+            </div>
+          </section>
+
+          {/* PROPERTIES PREVIEW */}
+          <section className="space-y-10 rounded-[48px] border border-white/10 bg-slate-900/70 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.55)]">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div className="space-y-4">
+                <span className="inline-flex items-center rounded-full border border-rose-400/60 bg-rose-500/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.35em] text-rose-200">
+                  catálogo click hostel
+                </span>
+                <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                  Conheça nossas casas e escolha a ideal para o seu grupo
+                </h2>
+                <p className="text-base text-slate-200/80">
+                  Temos hospedagens completas, com fotos e detalhes disponíveis em um catálogo exclusivo. Veja ambientes,
+                  entenda a capacidade de cada unidade e planeje pacotes para caravanas, empresas, festas privadas ou day use
+                  com toda a estrutura Click Hostel.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  className="inline-flex items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-rose-400/40 transition hover:-translate-y-1 hover:bg-rose-400"
+                  href="/hospedagens"
+                >
+                  Ver catálogo completo
+                </Link>
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-rose-300/70 px-6 py-3 text-sm font-semibold text-rose-100 transition hover:border-rose-200 hover:text-rose-200"
+                  href={whatsappLink}
+                  onClick={() => trackWhatsAppClick("whatsapp-home-catalogo")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Negociar pacotes especiais
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {featuredProperties.map((property) => (
+                <article
+                  key={property.slug}
+                  className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 p-6 transition duration-300 hover:border-rose-400/70 hover:bg-white/10"
+                >
+                  <div className="relative h-48 w-full overflow-hidden rounded-[28px] border border-white/10">
+                    <ImageWithFallback
+                      src={property.mainImage}
+                      fallbackSrc={property.fallbackSrc}
+                      alt={property.name}
+                      fill
+                      sizes="(min-width: 1024px) 320px, 90vw"
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                    <p className="absolute left-4 top-4 text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+                      Click Hostel
+                    </p>
+                  </div>
+                  <div className="space-y-4 pt-6">
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold text-white">{property.name}</h3>
+                      <p className="text-sm leading-relaxed text-slate-200/80">
+                        {property.shortDescription}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 text-xs font-medium text-slate-200/70">
+                      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                        {property.neighborhood}
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                        {property.distance}
+                      </span>
+                      <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                        {property.capacity}
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {property.tags.map((tag) => (
+                        <span
+                          key={`${property.slug}-${tag}`}
+                          className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-white/70"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <Link
+                      className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
+                      href={`/hospedagens/${property.slug}`}
+                    >
+                      Ver detalhes da casa →
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="rounded-[32px] border border-dashed border-rose-400/60 bg-rose-500/10 p-6 text-sm text-rose-100/90">
+              <p className="font-semibold text-rose-100">
+                Pacotes especiais para caravanas, empresas, festas e day use
+              </p>
+              <p className="mt-2 text-rose-50/80">
+                Ajustamos valores e logística para grupos grandes, oferecendo alimentação, infraestrutura para confraternizações
+                e suporte dedicado em toda a estadia.
+              </p>
             </div>
           </section>
 
