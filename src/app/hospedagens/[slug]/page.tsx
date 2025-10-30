@@ -206,7 +206,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 antecedência.
               </p>
             </div>
-            <span className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
+            <span className="text-center rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70">
               clique nas fotos para ampliar
             </span>
           </div>
@@ -215,6 +215,39 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             images={property.gallery}
             propertyName={property.name}
           />
+          <div className="flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-4 sm:size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+            <p className="max-w-2xl text-xs text-slate-200/80 font-semibold sm:text-base text-center">
+              Arraste as fotos ou a barra para os lados
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-4 sm:size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
         </section>
 
         <section className="rounded-[40px] border border-white/10 bg-white/5 p-8">

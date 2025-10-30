@@ -367,7 +367,7 @@ export default function PageMain() {
                       ))}
                     </div>
                     <Link
-                      className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
+                      className="mt-3 inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
                       href={`/hospedagens/${property.slug}`}
                     >
                       Ver detalhes da casa →
@@ -442,7 +442,7 @@ export default function PageMain() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="size-6"
+                className="size-4 sm:size-6"
               >
                 <path
                   strokeLinecap="round"
@@ -450,7 +450,7 @@ export default function PageMain() {
                   d="M15.75 19.5 8.25 12l7.5-7.5"
                 />
               </svg>
-              <p className="max-w-2xl text-base text-slate-200/80 font-semibold">
+              <p className="max-w-2xl text-xs text-slate-200/80 font-semibold sm:text-base text-center">
                 Arraste as fotos ou a barra para os lados
               </p>
               <svg
@@ -459,7 +459,7 @@ export default function PageMain() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="size-6"
+                className="size-4 sm:size-6"
               >
                 <path
                   strokeLinecap="round"

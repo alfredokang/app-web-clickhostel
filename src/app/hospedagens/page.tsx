@@ -116,7 +116,7 @@ export default function HospedagensPage() {
                   </div>
                   <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
                     <Link
-                      className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
+                      className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100 mb-4 sm:mb-0"
                       href={`/hospedagens/${property.slug}`}
                     >
                       Ver fotos e detalhes →

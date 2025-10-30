@@ -95,8 +95,9 @@ export function PropertyGallery({
             </button>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-950 via-slate-950/70 to-transparent" />
+        {/* Se desejar colocar efeito de sombreado nas bordas descomente abaixo */}
+        {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-950 via-slate-950/70 to-transparent" /> */}
       </div>
 
       {isOpen ? (
@@ -193,6 +194,40 @@ export function PropertyGallery({
                 ) : null}
               </button>
             ))}
+          </div>
+          <div className="flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-4 sm:size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+            <p className="max-w-2xl text-xs text-slate-200/80 font-semibold sm:text-base text-center">
+              Arraste as fotos ou a barra para os lados e clique na imagem
+              desejada
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-4 sm:size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
           </div>
         </div>
       ) : null}
