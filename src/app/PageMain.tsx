@@ -948,7 +948,7 @@ export default function PageMain() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                 <img
-                  src="/images/logos/cadastur-logo.png"
+                  src="/images/logos/cadastur-logo-white.png"
                   alt="Logotipo oficial Cadastur"
                   className="h-auto w-40"
                   loading="lazy"
