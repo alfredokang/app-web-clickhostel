@@ -229,27 +229,30 @@ export default function PageMain() {
                   gente.
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-4 rounded-[28px] border border-white/10 bg-slate-900/60 p-6 text-center">
+              <div className="flex flex-col items-center gap-5 rounded-[32px] border border-white/10 bg-slate-900/70 p-6 text-center shadow-inner shadow-slate-950/40 md:min-w-[320px]">
                 <p className="text-xs font-semibold uppercase tracking-[0.35em] text-rose-200/80">
                   verifique a autenticidade
                 </p>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/90 px-4 py-3 shadow-inner shadow-slate-900/20">
+                <div className="flex w-full flex-col items-center gap-4">
+                  <div className="relative w-full rounded-3xl border border-white/10 bg-white/95 px-6 py-6 shadow-[inset_0_8px_16px_rgba(15,23,42,0.12)]">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.45em] text-slate-500/80">
+                      vinculados ao ministério do turismo
+                    </p>
                     <img
                       src="/images/logos/cadastur-logo.png"
                       alt="Logotipo oficial do Cadastur"
-                      className="max-h-12 max-w-[100px] object-contain"
+                      className="mx-auto h-24 w-auto max-w-[240px] object-contain sm:h-28"
                       loading="lazy"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3">
+                  <div className="w-full max-w-[220px] overflow-hidden rounded-3xl border border-white/10 bg-white p-3 shadow-[0_12px_30px_-18px_rgba(15,23,42,0.65)]">
                     <ImageWithFallback
                       src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
                       fallbackSrc="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
                       alt="QR Code de autenticidade do Cadastur"
                       width={192}
                       height={192}
-                      className="h-30 w-30 object-contain"
+                      className="h-36 w-36 object-contain"
                       loading="lazy"
                     />
                   </div>
