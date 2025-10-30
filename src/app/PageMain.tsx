@@ -572,13 +572,19 @@ export default function PageMain() {
                   verifique a autenticidade
                 </p>
                 <div className="flex flex-col items-center gap-3">
-                  <div className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/90 px-4 py-3 shadow-inner shadow-slate-900/20">
+                  <div className="relative flex flex-col items-center gap-3 rounded-3xl border border-rose-400/60 bg-gradient-to-br from-white to-white/80 px-6 py-6 text-slate-900 shadow-xl shadow-rose-500/10">
+                    <span className="absolute -top-4 inline-flex items-center justify-center rounded-full border border-rose-400/60 bg-slate-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-rose-200">
+                      selo oficial
+                    </span>
                     <img
                       src="/images/logos/cadastur-logo.svg"
                       alt="Logotipo oficial do Cadastur"
-                      className="h-12 w-auto"
+                      className="h-16 w-auto sm:h-20"
                       loading="lazy"
                     />
+                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-rose-500">
+                      Ministério do Turismo
+                    </p>
                   </div>
                   <div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3">
                     <ImageWithFallback
