@@ -206,7 +206,6 @@ export default function PageMain() {
             </div>
           </section>
 
-          {/* TRUST BADGE */}
           {/* TRUST BADGE - CADASTUR EM DESTAQUE */}
           <section className="relative overflow-hidden rounded-[48px] border border-white/10 bg-slate-950/80 px-8 py-16 shadow-[0_40px_80px_-50px_rgba(244,63,94,0.55)]">
             {/* Background Effects */}
@@ -215,7 +214,7 @@ export default function PageMain() {
 
             <div className="mx-auto max-w-6xl">
               {/* Header Badge */}
-              <div className="mb-12 text-center">
+              <div className="mb-6">
                 <span className="inline-flex items-center gap-2 rounded-full border border-rose-400/40 bg-rose-400/10 px-6 py-2 text-[11px] font-semibold uppercase tracking-[0.4em] text-rose-200">
                   confiança click hostel
                 </span>
@@ -258,64 +257,59 @@ export default function PageMain() {
                     </p>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* WhatsApp CTA */}
                   <div className="flex flex-col gap-3">
                     <a
-                      href="https://cadastur.turismo.gov.br/"
+                      href={whatsappLink}
+                      onClick={() => trackWhatsAppClick("whatsapp-trust-area")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-rose-500/40 transition hover:translate-y-[-2px] hover:bg-rose-400 hover:shadow-xl hover:shadow-rose-500/50"
+                      className="inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
                     >
-                      Ver cadastro no Cadastur
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
+                        fill="currentColor"
                         viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        className="size-4"
+                        className="size-5 mr-2"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                        />
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                       </svg>
+                      Reservar tour virtual pelo WhatsApp
                     </a>
-                    <p className="text-xs text-slate-200/65">
-                      Escaneie o QR Code ou acesse o site oficial para validar
-                      nosso registro.
+                    <p className="text-xs text-slate-200/65 text-center">
+                      Fale conosco agora e tire todas as suas dúvidas sobre a
+                      hospedagem.
                     </p>
                   </div>
                 </div>
 
-                {/* Right Column - Large Cadastur Logo & QR Code */}
-                <div className="relative mx-auto flex w-full max-w-lg flex-col items-center gap-8 lg:order-2">
-                  {/* Large Logo Card */}
-                  <div className="relative w-full overflow-hidden rounded-[40px] border border-white/10 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950/90 p-10 shadow-[0_30px_70px_-40px_rgba(15,23,42,0.95)]">
-                    {/* Glow Effect */}
-                    <div className="pointer-events-none absolute inset-x-0 top-[-60px] -z-10 h-48 rounded-full bg-[radial-gradient(ellipse,_rgba(244,114,182,0.28),_transparent_70%)] blur-3xl" />
+                {/* Right Column - GIGANTIC Cadastur Logo & QR Code */}
+                <div className="relative mx-auto flex w-full max-w-2xl flex-col items-center gap-8 lg:order-2">
+                  {/* MEGA Large Logo Card */}
+                  <div className="relative w-full overflow-hidden rounded-[48px] border-2 border-white/15 bg-gradient-to-br from-slate-900/95 via-slate-900/85 to-slate-950/95 p-6 shadow-[0_35px_80px_-45px_rgba(15,23,42,1)]">
+                    {/* Glow Effect - Stronger */}
+                    <div className="pointer-events-none absolute inset-x-0 top-[-80px] -z-10 h-64 rounded-full bg-[radial-gradient(ellipse,_rgba(244,114,182,0.35),_transparent_70%)] blur-[80px]" />
 
-                    {/* Logo Container - GRANDE E DESTACADO */}
-                    <div className="relative mb-8 flex items-center justify-center">
-                      <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-emerald-400/20 via-emerald-300/15 to-cyan-400/20 blur-2xl" />
+                    {/* Logo Container - GIGANTE E SUPER DESTACADO */}
+                    <div className="relative mb-10 flex items-center justify-center">
+                      <div className="absolute inset-0 -z-10 scale-110 rounded-[40px] bg-gradient-to-br from-rose-400/25 via-rose-300/20 to-cyan-400/25 blur-3xl" />
                       <img
-                        src="/images/logos/cadastur-logo.png"
+                        src="/images/logos/cadastur-logo-white.png"
                         alt="Logotipo oficial do Cadastur"
-                        className="relative z-10 h-auto w-full max-w-[280px] object-contain drop-shadow-[0_8px_24px_rgba(16,185,129,0.35)]"
+                        className="relative z-10 h-auto w-full mt-4"
                         loading="lazy"
                       />
                     </div>
 
-                    {/* QR Code */}
-                    <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-3xl border-2 border-white/15 bg-white p-4 shadow-[0_20px_50px_-30px_rgba(15,23,42,0.8)]">
+                    {/* QR Code - Maior também */}
+                    <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-[32px] border-2 border-white/20 bg-white p-5 shadow-[0_25px_60px_-35px_rgba(15,23,42,0.9)]">
                       <ImageWithFallback
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
-                        fallbackSrc="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
+                        fallbackSrc="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
                         alt="QR Code de autenticidade do Cadastur"
-                        width={240}
-                        height={240}
-                        className="h-full w-full object-contain"
+                        width={280}
+                        height={280}
+                        className="h-full w-full"
                         loading="lazy"
                       />
                     </div>
@@ -329,6 +323,32 @@ export default function PageMain() {
                         Registro Cadastur ativo: mais segurança, transparência e
                         credibilidade para quem escolhe a Click Hostel.
                       </p>
+                    </div>
+
+                    {/* Cadastur Button - Dentro do container */}
+                    <div className="mt-6">
+                      <a
+                        href="https://cadastur.turismo.gov.br/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-rose-400/60 bg-rose-400/10 px-6 py-3 text-center text-sm font-semibold text-rose-200 transition hover:bg-rose-400/20"
+                      >
+                        Ver cadastro no Cadastur
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2"
+                          stroke="currentColor"
+                          className="size-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                          />
+                        </svg>
+                      </a>
                     </div>
                   </div>
 
