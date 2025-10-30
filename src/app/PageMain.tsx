@@ -470,6 +470,77 @@ export default function PageMain() {
             </div>
           </section>
 
+          {/* TRUST BADGE */}
+          <section className="rounded-[36px] border border-white/10 bg-white/[0.06] p-8 shadow-[0_30px_60px_-40px_rgba(244,63,94,0.45)]">
+            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+              <div className="space-y-4">
+                <span className="inline-flex items-center rounded-full border border-rose-400/30 bg-rose-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-rose-200">
+                  confiança click hostel
+                </span>
+                <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                  Somos Superhost Airbnb e certificados pelo Cadastur
+                </h2>
+                <p className="text-base text-slate-200/80">
+                  Há mais de 10 anos recebendo hóspedes com excelência, acumulamos avaliações que nos mantêm como Superhost no
+                  Airbnb. Cada estadia é conduzida com cuidado para transformar a sua viagem em uma lembrança inesquecível.
+                </p>
+                <p className="text-base text-slate-200/80">
+                  Também somos uma hospedagem certificada pelo Cadastur, garantindo que atuamos em conformidade com o Ministério
+                  do Turismo e oferecendo segurança extra para quem reserva com a gente.
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-4 rounded-[28px] border border-white/10 bg-slate-900/60 p-6 text-center">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-rose-200/80">
+                  verifique a autenticidade
+                </p>
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/90 px-4 py-3 shadow-inner shadow-slate-900/20">
+                    <img
+                      src="/images/logos/cadastur-logo.svg"
+                      alt="Logotipo oficial do Cadastur"
+                      className="h-12 w-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3">
+                    <ImageWithFallback
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
+                      fallbackSrc="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
+                      alt="QR Code de autenticidade do Cadastur"
+                      width={192}
+                      height={192}
+                      className="h-48 w-48 object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <p className="max-w-xs text-xs text-slate-200/70">
+                  Escaneie o QR Code para confirmar nosso registro oficial no Ministério do Turismo e fazer sua reserva com ainda
+                  mais confiança.
+                </p>
+                <a
+                  href="https://cadastur.turismo.gov.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 px-4 py-2 text-xs font-semibold text-rose-200 transition hover:bg-rose-400/20"
+                >
+                  Ver cadastro no Cadastur
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-4"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6H18v7.5" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 6 9 15l-4.5-4.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+
           {/* ACCOMMODATION TYPES */}
           <section id="acomodacoes" className="space-y-12">
             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -771,11 +842,24 @@ export default function PageMain() {
         {/* FOOTER */}
         <footer className="mt-auto rounded-[40px] border border-white/10 bg-white/10 p-8 text-sm text-slate-200/80">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <p className="text-lg font-semibold text-white">Click Hostel</p>
-              <p className="mt-1 text-sm text-slate-200/70">
-                Jabaquara · São Paulo · SP · Brasil
-              </p>
+            <div className="space-y-4">
+              <div>
+                <p className="text-lg font-semibold text-white">Click Hostel</p>
+                <p className="mt-1 text-sm text-slate-200/70">
+                  Jabaquara · São Paulo · SP · Brasil
+                </p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                <img
+                  src="/images/logos/cadastur-logo.svg"
+                  alt="Logotipo oficial Cadastur"
+                  className="h-10 w-auto"
+                  loading="lazy"
+                />
+                <p className="max-w-md text-xs text-slate-200/70">
+                  Registro Cadastur ativo: mais segurança, transparência e tranquilidade em cada hospedagem.
+                </p>
+              </div>
             </div>
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a

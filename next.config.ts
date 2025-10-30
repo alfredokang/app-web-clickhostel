@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       "images.unsplash.com",
       "datehouse.com.br",
       "www.datehouse.com.br",
+      "api.qrserver.com",
     ],
     remotePatterns: [
       {
@@ -19,6 +20,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "www.datehouse.com.br",
+      },
+      {
+        protocol: "https",
+        hostname: "api.qrserver.com",
       },
     ],
     formats: ["image/avif", "image/webp"],
