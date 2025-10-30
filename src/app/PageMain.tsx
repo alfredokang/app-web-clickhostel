@@ -206,80 +206,6 @@ export default function PageMain() {
             </div>
           </section>
 
-          {/* ACCESSIBILITY SECTION */}
-          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="flex h-14 w-25 items-center justify-center rounded-full bg-rose-400/20 text-rose-200">
-                  <img
-                    src="/images/accessibility.png"
-                    className="rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <span className="text-xs uppercase tracking-[0.45em] text-rose-200/80">
-                    acessibilidade total
-                  </span>
-                  <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
-                    Hospedagens pensadas para cadeirantes e atletas
-                  </h2>
-                </div>
-              </div>
-              <p className="text-base text-slate-200/80">
-                Algumas das nossas casas já nasceram adaptadas para pessoas com
-                deficiência. Recebemos delegações paralímpicas, montadores e
-                staffs que precisam circular com cadeira de rodas com segurança.
-                Rampas, banheiros acessíveis e equipe treinada garantem conforto
-                antes, durante e depois dos eventos no São Paulo Expo e no CT
-                Paralímpico.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {supportHighlights.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-rose-300/30 bg-rose-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-rose-100"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-5">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {accessibilityPillars.map((pillar) => (
-                  <div
-                    key={pillar.title}
-                    className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-inner shadow-black/30"
-                  >
-                    <h3 className="text-lg font-semibold text-white">
-                      {pillar.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-slate-200/80">
-                      {pillar.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <a
-                className="inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
-                href={whatsappLink}
-                onClick={() =>
-                  trackWhatsAppClick("whatsapp-home-accessibility")
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Quero saber mais
-              </a>
-              <p className="text-sm text-slate-200/70">
-                Parceiros recorrentes do CT Paralímpico e das principais feiras
-                da cidade. Conte com a Click Hostel para uma experiência
-                realmente inclusiva.
-              </p>
-            </div>
-          </section>
-
           {/* TRUST BADGE */}
           <section className="rounded-[36px] border border-white/10 bg-white/[0.06] p-8 shadow-[0_30px_60px_-40px_rgba(244,63,94,0.45)]">
             <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
@@ -361,6 +287,80 @@ export default function PageMain() {
                   </svg>
                 </a>
               </div>
+            </div>
+          </section>
+
+          {/* ACCESSIBILITY SECTION */}
+          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-25 items-center justify-center rounded-full bg-rose-400/20 text-rose-200">
+                  <img
+                    src="/images/accessibility.png"
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <div>
+                  <span className="text-xs uppercase tracking-[0.45em] text-rose-200/80">
+                    acessibilidade total
+                  </span>
+                  <h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
+                    Hospedagens pensadas para cadeirantes e atletas
+                  </h2>
+                </div>
+              </div>
+              <p className="text-base text-slate-200/80">
+                Algumas das nossas casas já nasceram adaptadas para pessoas com
+                deficiência. Recebemos delegações paralímpicas, montadores e
+                staffs que precisam circular com cadeira de rodas com segurança.
+                Rampas, banheiros acessíveis e equipe treinada garantem conforto
+                antes, durante e depois dos eventos no São Paulo Expo e no CT
+                Paralímpico.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {supportHighlights.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-rose-300/30 bg-rose-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-rose-100"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {accessibilityPillars.map((pillar) => (
+                  <div
+                    key={pillar.title}
+                    className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 shadow-inner shadow-black/30"
+                  >
+                    <h3 className="text-lg font-semibold text-white">
+                      {pillar.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-slate-200/80">
+                      {pillar.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <a
+                className="inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
+                href={whatsappLink}
+                onClick={() =>
+                  trackWhatsAppClick("whatsapp-home-accessibility")
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quero saber mais
+              </a>
+              <p className="text-sm text-slate-200/70">
+                Parceiros recorrentes do CT Paralímpico e das principais feiras
+                da cidade. Conte com a Click Hostel para uma experiência
+                realmente inclusiva.
+              </p>
             </div>
           </section>
 
@@ -551,90 +551,6 @@ export default function PageMain() {
                   d="m8.25 4.5 7.5 7.5-7.5 7.5"
                 />
               </svg>
-            </div>
-          </section>
-
-          {/* TRUST BADGE */}
-          <section className="rounded-[36px] border border-white/10 bg-white/[0.06] p-8 shadow-[0_30px_60px_-40px_rgba(244,63,94,0.45)]">
-            <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
-              <div className="space-y-4">
-                <span className="inline-flex items-center rounded-full border border-rose-400/30 bg-rose-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-rose-200">
-                  confiança click hostel
-                </span>
-                <h2 className="text-3xl font-semibold text-white sm:text-4xl">
-                  Somos Superhost Airbnb e certificados pelo Cadastur
-                </h2>
-                <p className="text-base text-slate-200/80">
-                  Há mais de 10 anos recebendo hóspedes com excelência,
-                  acumulamos avaliações que nos mantêm como Superhost no Airbnb.
-                  Cada estadia é conduzida com cuidado para transformar a sua
-                  viagem em uma lembrança inesquecível.
-                </p>
-                <p className="text-base text-slate-200/80">
-                  Também somos uma hospedagem certificada pelo Cadastur,
-                  garantindo que atuamos em conformidade com o Ministério do
-                  Turismo e oferecendo segurança extra para quem reserva com a
-                  gente.
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-4 rounded-[28px] border border-white/10 bg-slate-900/60 p-6 text-center">
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-rose-200/80">
-                  verifique a autenticidade
-                </p>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="flex items-center justify-center rounded-2xl border border-white/10 bg-white/90 px-4 py-3 shadow-inner shadow-slate-900/20">
-                    <img
-                      src="/images/logos/cadastur-logo.svg"
-                      alt="Logotipo oficial do Cadastur"
-                      className="h-12 w-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3">
-                    <ImageWithFallback
-                      src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
-                      fallbackSrc="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https%3A%2F%2Fcadastur.turismo.gov.br%2F"
-                      alt="QR Code de autenticidade do Cadastur"
-                      width={192}
-                      height={192}
-                      className="h-48 w-48 object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-                <p className="max-w-xs text-xs text-slate-200/70">
-                  Escaneie o QR Code para confirmar nosso registro oficial no
-                  Ministério do Turismo e fazer sua reserva com ainda mais
-                  confiança.
-                </p>
-                <a
-                  href="https://cadastur.turismo.gov.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 px-4 py-2 text-xs font-semibold text-rose-200 transition hover:bg-rose-400/20"
-                >
-                  Ver cadastro no Cadastur
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="size-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M10.5 6H18v7.5"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M18 6 9 15l-4.5-4.5"
-                    />
-                  </svg>
-                </a>
-              </div>
             </div>
           </section>
 
