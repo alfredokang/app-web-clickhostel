@@ -50,20 +50,17 @@ export default function PageMain() {
 
       <div className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-16 px-6 pb-32 pt-6 md:gap-24 md:px-10 lg:px-16">
         {/* HEADER */}
-        <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur-lg">
+        <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/95 px-5 py-3 backdrop-blur-lg">
           <div className="flex items-center">
-            <img
-              src="/images/logo/logoCH.png"
-              className="w-8 mr-2 rounded-full object-cover"
-            />
-            <div>
+            <img src="/images/logo/logoCH2.png" className="w-50" />
+            {/* <div>
               <p className="text-xs uppercase tracking-[0.3em] text-[#f28b8f]">
                 Click Hostel
               </p>
               <p className="text-sm font-medium text-slate-100/80">
                 São Paulo · SP · Brasil
               </p>
-            </div>
+            </div> */}
           </div>
           <a
             className="hidden items-center gap-2 rounded-full bg-[#e44c5a] px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-red-300/40 transition hover:scale-105 hover:bg-[#ee6d74] md:inline-flex"
