@@ -555,12 +555,16 @@ export default function PageMain() {
                   Somos Superhost Airbnb e certificados pelo Cadastur
                 </h2>
                 <p className="text-base text-slate-200/80">
-                  Há mais de 10 anos recebendo hóspedes com excelência, acumulamos avaliações que nos mantêm como Superhost no
-                  Airbnb. Cada estadia é conduzida com cuidado para transformar a sua viagem em uma lembrança inesquecível.
+                  Há mais de 10 anos recebendo hóspedes com excelência,
+                  acumulamos avaliações que nos mantêm como Superhost no Airbnb.
+                  Cada estadia é conduzida com cuidado para transformar a sua
+                  viagem em uma lembrança inesquecível.
                 </p>
                 <p className="text-base text-slate-200/80">
-                  Também somos uma hospedagem certificada pelo Cadastur, garantindo que atuamos em conformidade com o Ministério
-                  do Turismo e oferecendo segurança extra para quem reserva com a gente.
+                  Também somos uma hospedagem certificada pelo Cadastur,
+                  garantindo que atuamos em conformidade com o Ministério do
+                  Turismo e oferecendo segurança extra para quem reserva com a
+                  gente.
                 </p>
               </div>
               <div className="flex flex-col items-center gap-4 rounded-[28px] border border-white/10 bg-slate-900/60 p-6 text-center">
@@ -589,8 +593,9 @@ export default function PageMain() {
                   </div>
                 </div>
                 <p className="max-w-xs text-xs text-slate-200/70">
-                  Escaneie o QR Code para confirmar nosso registro oficial no Ministério do Turismo e fazer sua reserva com ainda
-                  mais confiança.
+                  Escaneie o QR Code para confirmar nosso registro oficial no
+                  Ministério do Turismo e fazer sua reserva com ainda mais
+                  confiança.
                 </p>
                 <a
                   href="https://cadastur.turismo.gov.br/"
@@ -607,8 +612,16 @@ export default function PageMain() {
                     stroke="currentColor"
                     className="size-4"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6H18v7.5" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 6 9 15l-4.5-4.5" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10.5 6H18v7.5"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M18 6 9 15l-4.5-4.5"
+                    />
                   </svg>
                 </a>
               </div>
@@ -925,13 +938,14 @@ export default function PageMain() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                 <img
-                  src="/images/logos/cadastur-logo.svg"
+                  src="/images/logos/cadastur-logo.png"
                   alt="Logotipo oficial Cadastur"
-                  className="h-10 w-auto"
+                  className="h-auto w-40"
                   loading="lazy"
                 />
                 <p className="max-w-md text-xs text-slate-200/70">
-                  Registro Cadastur ativo: mais segurança, transparência e tranquilidade em cada hospedagem.
+                  Registro Cadastur ativo: mais segurança, transparência e
+                  tranquilidade em cada hospedagem.
                 </p>
               </div>
             </div>
