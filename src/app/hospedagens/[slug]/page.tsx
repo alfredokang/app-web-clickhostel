@@ -113,6 +113,12 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
                 </span>
               ))}
             </div>
+            {property.address && (
+              <p className="text-xs text-slate-200/80 font-semibold">
+                • {property.address}
+              </p>
+            )}
+
             <div className="text-center flex flex-col gap-3 sm:flex-row sm:items-center">
               <WhatsAppCta trackingId={`whatsapp-detalhe-${property.slug}`}>
                 Reservar esta hospedagem agora

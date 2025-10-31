@@ -114,6 +114,11 @@ export default function HospedagensPage() {
                       </span>
                     ))}
                   </div>
+                  {property.address && (
+                    <p className="text-xs leading-relaxed text-slate-200/80 font-semibold">
+                      • {property.address}
+                    </p>
+                  )}
                   <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
                     <Link
                       className="inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100 mb-4 sm:mb-0"

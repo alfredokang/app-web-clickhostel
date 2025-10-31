@@ -264,7 +264,7 @@ export default function PageMain() {
                       onClick={() => trackWhatsAppClick("whatsapp-trust-area")}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
+                      className="text-center inline-flex w-full items-center justify-center rounded-full bg-rose-500 px-6 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-rose-300/40 transition hover:-translate-y-1 hover:bg-rose-400"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -534,6 +534,11 @@ export default function PageMain() {
                         </span>
                       ))}
                     </div>
+                    {property.address && (
+                      <p className="text-xs leading-relaxed text-slate-200/80 font-semibold">
+                        • {property.address}
+                      </p>
+                    )}
                     <Link
                       className="mt-3 inline-flex items-center text-sm font-semibold text-rose-200 transition hover:text-rose-100"
                       href={`/hospedagens/${property.slug}`}

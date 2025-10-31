@@ -17,6 +17,7 @@ export type Property = {
   accessibilityHighlights: string[];
   highlights: string[];
   segments: string[];
+  address?: string;
   gallery: PropertyGalleryImage[];
 };
 
@@ -54,6 +55,8 @@ export const properties: Property[] = [
       "Atletas e treinadores",
       "Montadores de stands e equipes técnicas",
     ],
+    address:
+      "Rua General Manuel Vargas, 381 - Jabaquara, São Paulo - SP, 04320-000",
     gallery: [
       {
         src: "/images/casas/casa_381/foto1.jpeg",
@@ -159,6 +162,8 @@ export const properties: Property[] = [
       "Montadores de stands",
       "Equipes de produção e marketing",
     ],
+    address:
+      "Rua Cornélio Pires, 101 - Cidade Vargas, São Paulo - SP, 04320-140",
     gallery: [
       {
         src: "/images/casas/casa_101/foto1.jpg",
@@ -300,6 +305,7 @@ export const properties: Property[] = [
       "Feirantes e expositores",
       "Equipes corporativas e de produção",
     ],
+    address: "Rua Pampa, 247/259 - Cidade Vargas, São Paulo - SP, 04318-060",
     gallery: [
       {
         src: "/images/casas/casa_247-259/foto1.jpg",
@@ -560,6 +566,8 @@ export const properties: Property[] = [
       "Grupos corporativos e visitantes de feiras",
       "Famílias em eventos ou férias em São Paulo",
     ],
+    address:
+      "Rua Getúlio Vargas Filho, 561 - Cidade Vargas, São Paulo - SP, 04318-030",
     gallery: [
       {
         src: "/images/casas/casa_561/foto1.png",
@@ -680,6 +688,8 @@ export const properties: Property[] = [
       "Famílias e grupos pequenos",
       "Visitantes de feiras e congressos",
     ],
+    address:
+      "Rua Hilário Ribeiro, 17 - Cidade Vargas, São Paulo - SP, 04319-060",
     gallery: [
       {
         src: "/images/casas/casa_17/foto1.jpg",
@@ -765,6 +775,8 @@ export const properties: Property[] = [
       "Profissionais em viagem de trabalho",
       "Casais em hospedagem curta",
     ],
+    address:
+      "Rua dos Buritis, 680 - Jardim Oriental, São Paulo - SP, 04321-002",
     gallery: [
       {
         src: "/images/casas/casa_680/foto1.png",
