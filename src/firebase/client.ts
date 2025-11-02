@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getDatabase, ref, push } from "firebase/database";
+import { getDatabase } from "firebase/database";
 
 // Configurações do Firebase (do .env)
 const firebaseConfig = {
@@ -13,20 +13,10 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// ! ESTAMOS USANDO O REALTIME DATABASE COMO PADRÃO
+// Inicializa o app só uma vez
+export const firebaseApp =
+  getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
-// ? PARA USAR O FIRESTORE
-// Inicializa apenas se ainda não estiver inicializado
-export const firebaseApp = !getApps().length
-  ? initializeApp(firebaseConfig)
-  : getApps()[0];
-
-// Exporta Firestore
+// Firestore e Realtime Database
 export const firestore = getFirestore(firebaseApp);
-
-// ? PARA USAR O REALTIME DATABASE
-// Inicialize o Firebase
-const app = initializeApp(firebaseConfig);
-
-// Exporta o Realtime Database
-export const database = getDatabase(app);
+export const database = getDatabase(firebaseApp);
