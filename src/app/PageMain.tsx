@@ -210,7 +210,10 @@ export default function PageMain() {
           </section>
 
           {/* TRUST BADGE - CADASTUR EM DESTAQUE */}
-          <section className="relative overflow-hidden rounded-[48px] border border-white/10 bg-slate-950/80 px-8 py-16 shadow-[0_40px_80px_-50px_rgba(244,63,94,0.55)]">
+          <section
+            id="credibility"
+            className="relative overflow-hidden rounded-[48px] border border-white/10 bg-slate-950/80 px-8 py-16 shadow-[0_40px_80px_-50px_rgba(244,63,94,0.55)]"
+          >
             {/* Background Effects */}
             <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(244,114,182,0.18)_0%,_rgba(15,23,42,0.85)_55%,_rgba(2,6,23,1)_100%)]" />
             <div className="pointer-events-none absolute inset-y-16 left-[-15%] -z-10 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,_rgba(34,211,238,0.20),_transparent_65%)] blur-3xl" />
@@ -378,7 +381,10 @@ export default function PageMain() {
           </section>
 
           {/* ACCESSIBILITY SECTION */}
-          <section className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]">
+          <section
+            id="accessibility"
+            className="grid gap-10 rounded-[48px] border border-white/10 bg-white/5 p-10 shadow-[0_40px_80px_-60px_rgba(244,63,94,0.45)] lg:grid-cols-[1.1fr_0.9fr]"
+          >
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="flex h-14 w-25 items-center justify-center rounded-full bg-rose-400/20 text-rose-200">
